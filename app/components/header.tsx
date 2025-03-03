@@ -2,7 +2,6 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { AiFillMoon, AiFillSun, AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { IoMdMoon } from "react-icons/io";
 
 export default function Header() {
   const { theme, setTheme } = useTheme();
@@ -25,7 +24,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="relative flex flex-row w-full justify-between items-center px-6 md:px-10 py-4 border-b border-gray-300 dark:border-gray-700">
+    <header className="relative flex flex-row w-full justify-between items-center px-6 md:px-10 py-4 shadow-sm">
       <a href="#" className="text-lg font-semibold">
         Rajith Sanjaya
       </a>
@@ -48,7 +47,7 @@ export default function Header() {
           {theme === "dark" ? (
             <AiFillSun size={20} />
           ) : (
-            <IoMdMoon  size={20} color="white" />
+            <AiFillMoon size={20} color="white" />
           )}
         </button>
         <button
