@@ -2,6 +2,7 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { AiFillMoon, AiFillSun, AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { IoMdMoon } from "react-icons/io";
 
 export default function Header() {
   const { theme, setTheme } = useTheme();
@@ -47,7 +48,7 @@ export default function Header() {
           {theme === "dark" ? (
             <AiFillSun size={20} />
           ) : (
-            <AiFillMoon size={20} color="white" />
+            <IoMdMoon  size={20} color="white" />
           )}
         </button>
         <button
