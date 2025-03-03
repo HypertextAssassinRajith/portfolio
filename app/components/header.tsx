@@ -1,7 +1,7 @@
 "use client";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { AiFillMoon, AiFillSun, AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { Sun, Moon, Menu, X } from "lucide-react";
 
 export default function Header() {
   const { theme, setTheme } = useTheme();
@@ -45,9 +45,9 @@ export default function Header() {
           className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 mr-2"
         >
           {theme === "dark" ? (
-            <AiFillSun size={20} />
+            <Sun size={20} />
           ) : (
-            <AiFillMoon size={20} color="white" />
+            <Moon size={20} color="white"/>
           )}
         </button>
         <button
@@ -55,9 +55,9 @@ export default function Header() {
           className="md:hidden p-2 rounded-full bg-gray-200 dark:bg-gray-800"
         >
           {isMenuOpen ? (
-            <AiOutlineClose size={20} color={theme === "light" ? "white" : undefined} />
+            <X size={20} color={theme === "light" ? "white" : undefined} />
           ) : (
-            <AiOutlineMenu size={20} color={theme === "light" ? "white" : undefined} />
+            <Menu size={20} color={theme === "light" ? "white" : undefined} />
           )}
         </button>
       </div>
