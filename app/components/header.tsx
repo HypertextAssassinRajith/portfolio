@@ -44,19 +44,26 @@ export default function Header() {
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 mr-2"
         >
-          {theme === "dark" ? <AiFillSun size={20} /> : <AiFillMoon size={20} />}
+          {theme === "dark" ? (
+            <AiFillSun size={20} />
+          ) : (
+            <AiFillMoon size={20} color="white" />
+          )}
         </button>
-        {/* Mobile menu toggle */}
         <button
-          onClick={() => setIsMenuOpen((prev) => !prev)}
+          onClick={() => setIsMenuOpen(prev => !prev)}
           className="md:hidden p-2 rounded-full bg-gray-200 dark:bg-gray-800"
         >
-          {isMenuOpen ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+          {isMenuOpen ? (
+            <AiOutlineClose size={20} color={theme === "light" ? "white" : undefined} />
+          ) : (
+            <AiOutlineMenu size={20} color={theme === "light" ? "white" : undefined} />
+          )}
         </button>
       </div>
       {isMenuOpen && (
         <nav className="absolute top-full left-0 w-full bg-white dark:bg-gray-900 border-t border-gray-300 dark:border-gray-700 md:hidden">
-          <ul className="flex flex-col space-y-4 p-4 text-base font-medium">
+          <ul className="flex flex-col space-y-4 p-4 text-base font-medium text-gray-800 dark:text-gray-100">
             {navItems.map((item) => (
               <li key={item.href}>
                 <a
