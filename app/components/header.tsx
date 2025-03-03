@@ -1,53 +1,76 @@
 "use client";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { AiFillMoon, AiFillSun } from "react-icons/ai";
+import { AiFillMoon, AiFillSun, AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 export default function Header() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  if (!mounted) return null; // Avoid hydration mismatch error in Next.js
+  if (!mounted) return null;
+
+  const navItems = [
+    { href: "#Home", label: "Home" },
+    { href: "#About", label: "About" },
+    { href: "#Skills", label: "Skills" },
+    { href: "#Services", label: "Services" },
+    { href: "#Portfolio", label: "Portfolio" },
+    { href: "#Contactme", label: "Contact Me" },
+  ];
 
   return (
-    <header className="flex flex-row w-full justify-center mt-3 mb-3">
-      <nav className="w-full flex flex-row justify-between">
-        <a href="#" className="ml-4">RajithSanjaya</a>
-        <div className="nav__menu" id="nav-menu">
-          <ul className="flex flex-row justify-evenly w-96">
-            <li className="nav__item">
-              <a href="#Home" className="nav__link active-link" id="btnHome">Home</a>
+    <header className="relative flex flex-row w-full justify-between items-center px-6 md:px-10 py-4 border-b border-gray-300 dark:border-gray-700">
+      <a href="#" className="text-lg font-semibold">
+        Rajith Sanjaya
+      </a>
+      <nav className="hidden md:block">
+        <ul className="flex space-x-6 text-sm font-medium">
+          {navItems.map((item) => (
+            <li key={item.href}>
+              <a href={item.href} className="hover:text-gray-500">
+                {item.label}
+              </a>
             </li>
-            <li className="nav__item">
-              <a href="#About" className="nav__link" id="btnAbout">About</a>
-            </li>
-            <li className="nav__item">
-              <a href="#Skills" className="nav__link" id="btnSkills">Skills</a>
-            </li>
-            <li className="nav__item">
-              <a href="#Services" className="nav__link" id="btnServices">Services</a>
-            </li>
-            <li className="nav__item">
-              <a href="#Portfolio" className="nav__link" id="btnPortfolio">Portfolio</a>
-            </li>
-            <li className="nav__item">
-              <a href="#Contactme" className="nav__link" id="btnContact">ContactMe</a>
-            </li>
-          </ul>
-        </div>
-        <div className="pr-4">
-          <button
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
-          >
-            {theme === "dark" ? <AiFillSun size={20} /> : <AiFillMoon size={20} />}
-          </button>
-        </div>
+          ))}
+        </ul>
       </nav>
+      <div className="flex items-center">
+        <button
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 mr-2"
+        >
+          {theme === "dark" ? <AiFillSun size={20} /> : <AiFillMoon size={20} />}
+        </button>
+        {/* Mobile menu toggle */}
+        <button
+          onClick={() => setIsMenuOpen((prev) => !prev)}
+          className="md:hidden p-2 rounded-full bg-gray-200 dark:bg-gray-800"
+        >
+          {isMenuOpen ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+        </button>
+      </div>
+      {isMenuOpen && (
+        <nav className="absolute top-full left-0 w-full bg-white dark:bg-gray-900 border-t border-gray-300 dark:border-gray-700 md:hidden">
+          <ul className="flex flex-col space-y-4 p-4 text-base font-medium">
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <a
+                  href={item.href}
+                  className="block w-full hover:text-gray-500"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
     </header>
   );
 }
