@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 // import Profile from "@/app/assets/perfil.png";
 // import Image from "next/image";
-import { ChevronsDown, Github, Linkedin, Mouse, SendHorizontal, Slack } from "lucide-react";
+import { Github, Linkedin, SendHorizontal, Slack } from "lucide-react";
 
 export default function Info() {
   const { theme } = useTheme();
@@ -16,74 +16,28 @@ export default function Info() {
   if (!mounted) return null;
   return (
     <section
-      className={`flex flex-col-reverse lg:flex-row items-center  justify-evenly min-h-screen px-10 transition-colors duration-300 ${
+      className={`flex flex-col-reverse lg:flex-row items-center justify-evenly min-h-screen px-6 md:px-10 transition-colors duration-300 ${
         theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       }`}
     >
-      <div className="flex flex-row items-start lg:w-1/2 justify-evenly">
-      <div className="lg:grid lg:h-80 lg:grid-cols-1 lg:content-evenly hidden lg:block">
-          <a href="https://linkedin.com/in/sanjaya-senanayaka-976a32193" target="_blank" className="">
-            <Linkedin />
-          </a>
-          <a href="https://www.reddit.com/user/Rajith11" target="_blank" className="">
-            <Slack />
-          </a>
-          <a href="https://github.com/Hypertext-Assassin-RSS" target="_blank" className="">
-          <Github />
-          </a>
-      </div>
-        <div className="flex flex-col items-start lg:w-fit content-evenly">
-        <div className="flex flex-col space-y-4 mb-6">
-          <a
-            href="https://linkedin.com/in/sanjaya-senanayaka-976a32193"
-            target="_blank"
-            rel="noreferrer"
-            className="text-purple-600 text-2xl"
-          >
-            <i className="uil uil-linkedin"></i>
-          </a>
-          <a
-            href="https://www.reddit.com/user/Rajith11"
-            target="_blank"
-            rel="noreferrer"
-            className="text-purple-600 text-2xl"
-          >
-            <i className="uil uil-reddit-alien-alt"></i>
-          </a>
-          <a
-            href="https://github.com/Hypertext-Assassin-RSS"
-            target="_blank"
-            rel="noreferrer"
-            className="text-purple-600 text-2xl"
-          >
-            <i className="uil uil-github"></i>
-          </a>
-        </div>
+      <div className="flex flex-col items-start lg:items-start lg:w-1/2 text-start lg:text-left">
         <h1 className="text-4xl font-bold">{"Hi, I'm Rajith Sanjaya"}</h1>
-        <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-500 mt-1">
+        <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-300">
           Full Stack Developer
         </h3>
-        <p className="text-gray-600 dark:text-gray-400 mt-1">
+        <p className="text-gray-600 dark:text-gray-400 mt-2">
           Experience in web design and producing quality works
         </p>
         <a
           href="mailto:sanjayasenanayaka11@gmail.com"
-          className="mt-4 px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 flex items-center gap-2 transition-transform duration-300 group"
+          className="mt-4 px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 flex items-center space-x-2 transition-transform duration-300 group"
         >
-          Contact Me
+          <span>Contact Me</span>
           <SendHorizontal className="transform transition-transform duration-300 group-hover:translate-x-2" />
         </a>
-        <div className="hidden lg:inline mt-5">
-              <a href="#" className="flex flex-row transition-transform duration-300 group">
-                  <Mouse  className="transform transition-transform duration-300 group-hover:translate-y-2"/>
-                  <span className="mr-1 ml-1 transform transition-transform duration-300 group-hover:translate-y-2">Scroll down</span>
-                  <ChevronsDown className="transform transition-transform duration-300 group-hover:translate-y-2"/>
-              </a>
-          </div>
-        </div>
       </div>
-      <div className="flex flex-row lg:flex-row items-center justify-center w-fit">
-      <div className="grid h-40 grid-cols-1 content-evenly lg:hidden">
+      <div className="flex content-center">
+      <div className="grid h-56 grid-cols-1 content-evenly lg:hidden">
           <a href="https://linkedin.com/in/sanjaya-senanayaka-976a32193" target="_blank" className="home__social-icon">
             <Linkedin />
           </a>
@@ -94,8 +48,9 @@ export default function Info() {
           <Github />
           </a>
         </div>
-        <div className="lg:w-fit flex justify-center relative mt-8 lg:mt-0">
-          <div className="w-96 h-96 lg:w-80 lg:h-80 relative flex items-center justify-center">
+        <div className="flex flex-col lg:flex-row items-center justify-center w-full  lg:mt-0">
+        <div className="lg:w-1/2 flex justify-center relative">
+          <div className="w-64 h-64 md:w-80 md:h-80 relative flex items-center justify-center">
             <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" className="absolute">
               <defs>
                 <clipPath id="blobClip">
@@ -121,6 +76,8 @@ export default function Info() {
           </div>
         </div>
       </div>
+      </div>
+      
     </section>
   );
 }
