@@ -51,7 +51,7 @@ export default function Info() {
       </div>
       </div>
       <div className="flex content-center lg:w-full">
-      <div className="grid h-56 grid-cols-1 content-evenly lg:hidden">
+      <div className="grid h-56 grid-cols-1 content-evenly ml-10 lg:hidden">
           <a href="https://linkedin.com/in/sanjaya-senanayaka-976a32193" target="_blank" className="">
             <Linkedin />
           </a>
@@ -62,7 +62,7 @@ export default function Info() {
           <Github />
           </a>
         </div>
-        <div className="flex flex-col lg:flex-row items-center justify-center w-full  lg:mt-0">
+        <div className="flex flex-col lg:flex-row items-center justify-center w-full lg:mt-0">
         <div className="lg:w-1/2 flex justify-center relative">
           <div className="w-96 md:w-80  sm:w-64 relative flex items-center justify-center">
             <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" className="absolute">
