@@ -48,10 +48,10 @@ export default function Info() {
           </a>
         </div>
         <h1 className="text-4xl font-bold">{"Hi, I'm Rajith Sanjaya"}</h1>
-        <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-300">
+        <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-500 mt-1">
           Full Stack Developer
         </h3>
-        <p className="text-gray-600 dark:text-gray-400 mt-2">
+        <p className="text-gray-600 dark:text-gray-400 mt-1">
           Experience in web design and producing quality works
         </p>
         <a
