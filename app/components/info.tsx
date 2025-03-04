@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Profile from "@/app/assets/perfil.png";
 import Image from "next/image";
+import { SendHorizontal } from "lucide-react";
 
 export default function Info() {
   const { theme } = useTheme();
@@ -55,9 +56,10 @@ export default function Info() {
         </p>
         <a
           href="mailto:sanjayasenanayaka11@gmail.com"
-          className="mt-4 px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 flex items-center gap-2"
+          className="mt-4 px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 flex items-center gap-2 transition-transform duration-300 group"
         >
-          Contact Me <i className="uil uil-envelope-upload"></i>
+          Contact Me
+          <SendHorizontal className="transform transition-transform duration-300 group-hover:translate-x-2" />
         </a>
       </div>
       <div className="flex flex-col lg:flex-row items-center justify-center w-fit">
