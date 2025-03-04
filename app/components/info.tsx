@@ -46,7 +46,7 @@ export default function Info() {
             <i className="uil uil-github"></i>
           </a>
         </div>
-        <h1 className="text-4xl font-bold">Hi, I'm Rajith Sanjaya</h1>
+        <h1 className="text-4xl font-bold">{"Hi, I'm Rajith Sanjaya"}</h1>
         <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-300">
           Full Stack Developer
         </h3>
