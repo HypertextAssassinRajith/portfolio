@@ -45,9 +45,9 @@ export default function Header() {
           className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 mr-2"
         >
           {theme === "dark" ? (
-            <Sun size={20} className="text-gray-900" />
+            <Sun size={20} className="text-gray-900 lg:text-gray-100" />
           ) : (
-            <Moon size={20} className="text-gray-800" />
+            <Moon size={20} className="text-gray-800 lg:text-gray-100" />
           )}
         </button>
         <button
