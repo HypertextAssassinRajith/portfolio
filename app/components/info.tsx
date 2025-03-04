@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Profile from "@/app/assets/perfil.png";
 import Image from "next/image";
-import { ChevronsDown, Mouse, SendHorizontal } from "lucide-react";
+import { ChevronsDown, Github, Linkedin, Mouse, SendHorizontal, Slack } from "lucide-react";
 
 export default function Info() {
   const { theme } = useTheme();
@@ -16,7 +16,7 @@ export default function Info() {
   if (!mounted) return null;
   return (
     <section
-      className={`flex flex-col-reverse lg:flex-row items-center justify-evenly min-h-screen px-10 transition-colors duration-300 ${
+      className={`flex flex-col-reverse lg:flex-row items-center  justify-evenly min-h-screen px-10 transition-colors duration-300 ${
         theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       }`}
     >
@@ -69,7 +69,18 @@ export default function Info() {
               </a>
           </div>
       </div>
-      <div className="flex flex-col lg:flex-row items-center justify-center w-fit">
+      <div className="flex flex-row lg:flex-row items-center justify-center w-fit">
+      <div className="grid h-40 grid-cols-1 content-evenly">
+          <a href="https://linkedin.com/in/sanjaya-senanayaka-976a32193" target="_blank" className="home__social-icon">
+            <Linkedin />
+          </a>
+          <a href="https://www.reddit.com/user/Rajith11" target="_blank" className="home__social-icon">
+            <Slack />
+          </a>
+          <a href="https://github.com/Hypertext-Assassin-RSS" target="_blank" className="home__social-icon">
+          <Github />
+          </a>
+        </div>
         <div className="lg:w-fit flex justify-center relative mt-8 lg:mt-0">
           <div className="w-96 h-96 lg:w-80 lg:h-80 relative flex items-center justify-center">
             <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" className="absolute">
