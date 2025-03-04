@@ -19,7 +19,7 @@ export default function Info() {
         theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       }`}
     >
-      <div className="flex flex-col items-start lg:w-1/2">
+      <div className="flex flex-col items-start lg:w-fit">
         <div className="flex flex-col space-y-4 mb-6">
           <a
             href="https://linkedin.com/in/sanjaya-senanayaka-976a32193"
