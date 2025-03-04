@@ -50,11 +50,12 @@ export default function Info() {
         </a>
       </div>
       </div>
-      <div className="flex content-center lg:w-full">
+      <div className="flex content-center w-full">
       <div className="grid h-56 grid-cols-1 content-evenly lg:hidden">
           <a href="https://linkedin.com/in/sanjaya-senanayaka-976a32193" target="_blank" className="">
             <Linkedin />
           </a>
+          
           <a href="https://www.reddit.com/user/Rajith11" target="_blank" className="">
             <Slack />
           </a>
@@ -64,20 +65,20 @@ export default function Info() {
         </div>
         <div className="flex flex-col lg:flex-row items-center justify-center w-full  lg:mt-0">
         <div className="lg:w-1/2 flex justify-center relative">
-          <div className="w-96 md:w-80  sm:w-64 relative flex items-center justify-center">
-            <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" className="absolute">
+          <div className="w-96 md:w-80  sm:w-64 relative flex items-center justify-center ">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="absolute">
               <defs>
                 <clipPath id="blobClip">
                   <path
                     d="M62.2,-39.8C71.1,-20.4,62.3,5.2,49,23.4C35.7,41.6,17.8,52.2,-0.8,52.7C-19.4,53.2,-38.8,43.4,-51.3,25.7C-63.7,8.1,-69.1,-17.5,-59.4,-37.3C-49.7,-57.2,-24.8,-71.3,0.9,-71.8C26.6,-72.3,53.2,-59.2,62.2,-39.8Z"
-                    transform="translate(100 100) scale(1.5)"
+                    transform="translate(100 100) scale(1)"
                   />
                 </clipPath>
               </defs>
               <path
                 fill="#6E57E0"
                 d="M62.2,-39.8C71.1,-20.4,62.3,5.2,49,23.4C35.7,41.6,17.8,52.2,-0.8,52.7C-19.4,53.2,-38.8,43.4,-51.3,25.7C-63.7,8.1,-69.1,-17.5,-59.4,-37.3C-49.7,-57.2,-24.8,-71.3,0.9,-71.8C26.6,-72.3,53.2,-59.2,62.2,-39.8Z"
-                transform="translate(150 150) scale(1.5)"
+                transform="translate(100 100) scale(1)"
               />
             </svg>
             {/* <Image
