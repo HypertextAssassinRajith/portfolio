@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Profile from "@/app/assets/perfil.png";
 import Image from "next/image";
-import { SendHorizontal } from "lucide-react";
+import { ChevronsDown, Mouse, SendHorizontal } from "lucide-react";
 
 export default function Info() {
   const { theme } = useTheme();
@@ -20,7 +20,7 @@ export default function Info() {
         theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       }`}
     >
-      <div className="flex flex-col items-start lg:w-fit">
+      <div className="flex flex-col items-start lg:w-fit content-evenly">
         <div className="flex flex-col space-y-4 mb-6">
           <a
             href="https://linkedin.com/in/sanjaya-senanayaka-976a32193"
@@ -61,6 +61,13 @@ export default function Info() {
           Contact Me
           <SendHorizontal className="transform transition-transform duration-300 group-hover:translate-x-2" />
         </a>
+        <div className="hidden lg:inline mt-5">
+              <a href="#" className="flex flex-row transition-transform duration-300 group">
+                  <Mouse  className="transform transition-transform duration-300 group-hover:translate-y-2"/>
+                  <span className="mr-1 ml-1 transform transition-transform duration-300 group-hover:translate-y-2">Scroll down</span>
+                  <ChevronsDown className="transform transition-transform duration-300 group-hover:translate-y-2"/>
+              </a>
+          </div>
       </div>
       <div className="flex flex-col lg:flex-row items-center justify-center w-fit">
         <div className="lg:w-fit flex justify-center relative mt-8 lg:mt-0">
