@@ -20,7 +20,20 @@ export default function Info() {
         theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       }`}
     >
-      <div className="flex flex-col items-start lg:items-start lg:w-1/2 text-start lg:text-left">
+      <div className="flex justify-evenly w-full">
+      <div className="h-56 grid-cols-1 content-evenly hidden lg:grid">
+          <a href="https://linkedin.com/in/sanjaya-senanayaka-976a32193" target="_blank" className="">
+            <Linkedin />
+          </a>
+          <a href="https://www.reddit.com/user/Rajith11" target="_blank" className="">
+            <Slack />
+          </a>
+          <a href="https://github.com/Hypertext-Assassin-RSS" target="_blank" className="">
+          <Github />
+          </a>
+        </div>
+
+        <div className="flex flex-col items-start lg:items-start lg:w-1/2 text-start lg:text-left">
         <h1 className="text-4xl font-bold">{"Hi, I'm Rajith Sanjaya"}</h1>
         <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-300 mt-2">
           Full Stack Developer
@@ -36,7 +49,8 @@ export default function Info() {
           <SendHorizontal className="transform transition-transform duration-300 group-hover:translate-x-2" />
         </a>
       </div>
-      <div className="flex content-center">
+      </div>
+      <div className="flex content-center lg:w-full">
       <div className="grid h-56 grid-cols-1 content-evenly lg:hidden">
           <a href="https://linkedin.com/in/sanjaya-senanayaka-976a32193" target="_blank" className="">
             <Linkedin />
