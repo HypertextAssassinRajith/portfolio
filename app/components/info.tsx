@@ -21,7 +21,7 @@ export default function Info() {
       }`}
     >
       <div className="flex flex-row items-start lg:w-1/2 justify-evenly">
-      <div className="lg:grid lg:h-80 lg:grid-cols-1 lg:content-evenly hidden lg:block">
+      <div className="lg:grid lg:h-56 lg:grid-cols-1 lg:content-evenly hidden lg:block">
           <a href="https://linkedin.com/in/sanjaya-senanayaka-976a32193" target="_blank" className="">
             <Linkedin />
           </a>
@@ -33,32 +33,6 @@ export default function Info() {
           </a>
       </div>
         <div className="flex flex-col items-start lg:w-fit content-evenly">
-        <div className="flex flex-col space-y-4 mb-6">
-          <a
-            href="https://linkedin.com/in/sanjaya-senanayaka-976a32193"
-            target="_blank"
-            rel="noreferrer"
-            className="text-purple-600 text-2xl"
-          >
-            <i className="uil uil-linkedin"></i>
-          </a>
-          <a
-            href="https://www.reddit.com/user/Rajith11"
-            target="_blank"
-            rel="noreferrer"
-            className="text-purple-600 text-2xl"
-          >
-            <i className="uil uil-reddit-alien-alt"></i>
-          </a>
-          <a
-            href="https://github.com/Hypertext-Assassin-RSS"
-            target="_blank"
-            rel="noreferrer"
-            className="text-purple-600 text-2xl"
-          >
-            <i className="uil uil-github"></i>
-          </a>
-        </div>
         <h1 className="text-4xl font-bold">{"Hi, I'm Rajith Sanjaya"}</h1>
         <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-500 mt-1">
           Full Stack Developer
@@ -82,7 +56,7 @@ export default function Info() {
           </div>
         </div>
       </div>
-      <div className="flex flex-row lg:flex-row items-center justify-center w-fit">
+      <div className="flex flex-row lg:flex-row items-center justify-center w-fit sm:w-full">
       <div className="grid h-40 grid-cols-1 content-evenly lg:hidden">
           <a href="https://linkedin.com/in/sanjaya-senanayaka-976a32193" target="_blank" className="home__social-icon">
             <Linkedin />
