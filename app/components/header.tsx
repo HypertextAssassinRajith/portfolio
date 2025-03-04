@@ -45,19 +45,19 @@ export default function Header() {
           className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 mr-2"
         >
           {theme === "dark" ? (
-            <Sun size={20} />
+            <Sun size={20} className="text-gray-900 lg:text-gray-100" />
           ) : (
-            <Moon size={20} color="white"/>
+            <Moon size={20} className="text-gray-800 lg:text-gray-100" />
           )}
         </button>
         <button
-          onClick={() => setIsMenuOpen(prev => !prev)}
+          onClick={() => setIsMenuOpen((prev) => !prev)}
           className="md:hidden p-2 rounded-full bg-gray-200 dark:bg-gray-800"
         >
           {isMenuOpen ? (
-            <X size={20} color={theme === "light" ? "white" : undefined} />
+            <X size={20} className={theme === "light" ? "text-gray-800" : "text-white"} />
           ) : (
-            <Menu size={20} color={theme === "light" ? "white" : undefined} />
+            <Menu size={20} className={theme === "light" ? "text-gray-800" : "text-gray-900"} />
           )}
         </button>
       </div>
