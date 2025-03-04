@@ -2,8 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import Profile from "@/app/assets/perfil.png";
-import Image from "next/image";
+// import Profile from "@/app/assets/perfil.png";
+// import Image from "next/image";
 import { ChevronsDown, Github, Linkedin, Mouse, SendHorizontal, Slack } from "lucide-react";
 
 export default function Info() {
