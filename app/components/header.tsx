@@ -1,51 +1,83 @@
-import React from 'react';
-import { AiFillMoon } from "react-icons/ai";
+"use client";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+import { Sun, Moon, Menu, X } from "lucide-react";
 
 export default function Header() {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    return (
-            <header className="flex flex-row w-full justify-center mt-3 mb-3" >
-                        <nav className="w-full flex flex-row justify-between">
-                            <a href="#" className="ml-4">RajithSanjaya</a>
-                            <div className="nav__menu" id="nav-menu">
-                                <ul className="flex flex-row justify-evenly w-96">
-                                    <li className="nav__item">
-                                        <a href="#Home" className="nav__link active-link" id="btnHome">
-                                            <i className="uil uil-estate nav__icon"></i>Home
-                                        </a>
-                                    </li>
-                                    <li className="nav__item">
-                                        <a href="#About" className="nav__link" id="btnAbout">
-                                            <i className="uil uil-user nav__icon"></i>About
-                                        </a>
-                                    </li>
-                                    <li className="nav__item">
-                                        <a href="#Skills" className="nav__link" id="btnSkills">
-                                            <i className="uil uil-file-alt nav__icon"></i>Skills
-                                        </a>
-                                    </li>
-                                    <li className="nav__item">
-                                        <a href="#Services" className="nav__link" id="btnServices">
-                                            <i className="uil uil-suitcase nav__icon"></i>Services
-                                        </a>
-                                    </li>
-                                    <li className="nav__item">
-                                        <a href="#Portfolio" className="nav__link" id="btnPortfolio">
-                                            <i className="uil uil-scenery nav__icon"></i>Portfolio
-                                        </a>
-                                    </li>
-                                    <li className="nav__item">
-                                        <a href="#Contactme" className="nav__link" id="btnContact">
-                                            <i className="uil uil-envelope-upload nav__icon"></i>ContactMe
-                                        </a>
-                                    </li>
-                                </ul>
-                                <i className="uil uil-times nav__close" id="nav-close"></i>
-                            </div>
-                            <div className="pr-4">
-                            <AiFillMoon />
-                            </div>
-                        </nav>
-            </header>
-    )
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  const navItems = [
+    { href: "#Home", label: "Home" },
+    { href: "#About", label: "About" },
+    { href: "#Skills", label: "Skills" },
+    { href: "#Services", label: "Services" },
+    { href: "#Portfolio", label: "Portfolio" },
+    { href: "#Contactme", label: "Contact Me" },
+  ];
+
+  return (
+    <header className="relative flex flex-row w-full justify-between items-center px-6 md:px-10 py-4 shadow-sm">
+      <a href="#" className="text-lg font-semibold">
+        Rajith Sanjaya
+      </a>
+      <nav className="hidden md:block">
+        <ul className="flex space-x-6 text-sm font-medium">
+          {navItems.map((item) => (
+            <li key={item.href}>
+              <a href={item.href} className="hover:text-gray-500">
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <div className="flex items-center">
+        <button
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 mr-2"
+        >
+          {theme === "dark" ? (
+            <Sun size={20} />
+          ) : (
+            <Moon size={20} color="white"/>
+          )}
+        </button>
+        <button
+          onClick={() => setIsMenuOpen(prev => !prev)}
+          className="md:hidden p-2 rounded-full bg-gray-200 dark:bg-gray-800"
+        >
+          {isMenuOpen ? (
+            <X size={20} color={theme === "light" ? "white" : undefined} />
+          ) : (
+            <Menu size={20} color={theme === "light" ? "white" : undefined} />
+          )}
+        </button>
+      </div>
+      {isMenuOpen && (
+        <nav className="absolute top-full left-0 w-full bg-white dark:bg-gray-900 border-t border-gray-300 dark:border-gray-700 md:hidden">
+          <ul className="flex flex-col space-y-4 p-4 text-base font-medium text-gray-800 dark:text-gray-100">
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <a
+                  href={item.href}
+                  className="block w-full hover:text-gray-500"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
+    </header>
+  );
 }
