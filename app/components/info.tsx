@@ -20,7 +20,19 @@ export default function Info() {
         theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       }`}
     >
-      <div className="flex flex-col items-start lg:w-fit content-evenly">
+      <div className="flex flex-row items-start lg:w-1/2 justify-evenly">
+      <div className="lg:grid lg:h-80 lg:grid-cols-1 lg:content-evenly hidden lg:block">
+          <a href="https://linkedin.com/in/sanjaya-senanayaka-976a32193" target="_blank" className="">
+            <Linkedin />
+          </a>
+          <a href="https://www.reddit.com/user/Rajith11" target="_blank" className="">
+            <Slack />
+          </a>
+          <a href="https://github.com/Hypertext-Assassin-RSS" target="_blank" className="">
+          <Github />
+          </a>
+      </div>
+        <div className="flex flex-col items-start lg:w-fit content-evenly">
         <div className="flex flex-col space-y-4 mb-6">
           <a
             href="https://linkedin.com/in/sanjaya-senanayaka-976a32193"
@@ -68,9 +80,10 @@ export default function Info() {
                   <ChevronsDown className="transform transition-transform duration-300 group-hover:translate-y-2"/>
               </a>
           </div>
+        </div>
       </div>
       <div className="flex flex-row lg:flex-row items-center justify-center w-fit">
-      <div className="grid h-40 grid-cols-1 content-evenly">
+      <div className="grid h-40 grid-cols-1 content-evenly lg:hidden">
           <a href="https://linkedin.com/in/sanjaya-senanayaka-976a32193" target="_blank" className="home__social-icon">
             <Linkedin />
           </a>
