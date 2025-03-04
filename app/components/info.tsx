@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Profile from "@/app/assets/perfil.png"
+import Image from 'next/image'
 
 export default function Info() {
   const { theme } = useTheme();
