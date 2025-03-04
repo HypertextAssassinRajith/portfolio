@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 // import Profile from "@/app/assets/perfil.png";
 // import Image from "next/image";
-import { SendHorizontal } from "lucide-react";
+import { Github, Linkedin, SendHorizontal, Slack } from "lucide-react";
 
 export default function Info() {
   const { theme } = useTheme();
@@ -36,7 +36,19 @@ export default function Info() {
           <SendHorizontal className="transform transition-transform duration-300 group-hover:translate-x-2" />
         </a>
       </div>
-      <div className="flex flex-col lg:flex-row items-center justify-center w-full mt-8 lg:mt-0">
+      <div className="flex content-center">
+      <div className="grid h-56 grid-cols-1 content-evenly lg:hidden">
+          <a href="https://linkedin.com/in/sanjaya-senanayaka-976a32193" target="_blank" className="home__social-icon">
+            <Linkedin />
+          </a>
+          <a href="https://www.reddit.com/user/Rajith11" target="_blank" className="home__social-icon">
+            <Slack />
+          </a>
+          <a href="https://github.com/Hypertext-Assassin-RSS" target="_blank" className="home__social-icon">
+          <Github />
+          </a>
+        </div>
+        <div className="flex flex-col lg:flex-row items-center justify-center w-full  lg:mt-0">
         <div className="lg:w-1/2 flex justify-center relative">
           <div className="w-64 h-64 md:w-80 md:h-80 relative flex items-center justify-center">
             <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" className="absolute">
@@ -64,6 +76,8 @@ export default function Info() {
           </div>
         </div>
       </div>
+      </div>
+      
     </section>
   );
 }
