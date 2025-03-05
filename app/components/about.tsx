@@ -23,7 +23,7 @@ export default function About (){
         >
              <h1 className="text-4xl font-bold">About Me</h1>
              <span className="text-xl font-semibold text-gray-700 dark:text-gray-500 mt-2">My Introduction</span>
-             <div className="grid grid-cols-2 mt-5">
+             <div className="grid grid-cols-2 mt-5 items-center justify-evenly">
              {/* <Image src={Profile.src} alt="Profile Picture" width={200} height={200} className="absolute z-10 rounded-full" /> */}
              <div className="bg-blue-500 size-50 p-6 text-white"></div>
                 <div className="flex flex-col items-center justify-evenly">
@@ -50,7 +50,7 @@ export default function About (){
                 </div>
                 <a
                     href="mailto:sanjayasenanayaka11@gmail.com"
-                    className="mt-4 px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 flex items-center space-x-2 transition-transform duration-300 group"
+                    className="mt-6 px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 flex items-center space-x-2 transition-transform duration-300 group"
                     >
                     <span>Download CV</span>
                     <Download  className="transform transition-transform duration-300 group-hover:translate-y-1" />
