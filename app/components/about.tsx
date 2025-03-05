@@ -31,20 +31,23 @@ export default function About (){
                 <div className="flex flex-col items-center justify-evenly">
                 <p className="text-gray-600 dark:text-gray-400 mt-2">Software Engineering Web development  and design ,with Ui / Ux design of user
                 friendly modern style</p>
-                <div className="grid grid-cols-1 gap-4 justify-center w-fit">
-                    <div>
+                <div className="grid grid-cols-3  gap-4 justify-center w-fit">
+                    <div className="flex flex-col items-center justify-evenly">
                         <span className="font-semibold">02+</span>
-                        <span className="text-sm">Years  experience </span>
+                        <span className="text-xs">Years</span>
+                        <span className="text-xs">experience </span>
                     </div>
 
-                    <div>
+                    <div className="flex flex-col items-center justify-evenly">
                         <span className="font-semibold">10+</span>
-                        <span className="">Completed  projects </span>
+                        <span className="text-xs">Completed</span>
+                        <span className="text-xs">projects</span>
                     </div>
 
-                    <div>
+                    <div className="flex flex-col items-center justify-evenly">
                         <span className="font-semibold">02+</span>
-                         <span className="">Companies   worked </span>
+                         <span className="text-xs">Companies</span>
+                         <span className="text-xs">worked </span>
                     </div>
                 </div>
                 </div>
