@@ -21,7 +21,7 @@ export default function Skill(){
           }`}>
             <h1 className="text-4xl font-bold">Skills</h1>
             <span className="text-xl font-semibold text-gray-700 dark:text-gray-500 mt-2">My Skills</span>
-            <div className="flex flex-col m-5">
+            <div className="flex flex-col m-5 w-2/3 lg:w-1/5">
               <div className="flex justify-evenly items-center p-5">
                 <UilWindowGrid size = {50} color="#8200DB" />
                 <div>

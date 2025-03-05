@@ -63,10 +63,10 @@ export default function Info() {
           <Github />
           </a>
         </div>
-        <div className="flex flex-col lg:flex-row items-center justify-center w-full  lg:mt-0">
-        <div className="lg:w-1/2 flex justify-center relative">
+        <div className="flex flex-col lg:flex-row items-center justify-center w-full lg:mt-0">
+        <div className="lg:w-1/2 flex justify-center relative ">
           <div className="w-96 md:w-80  sm:w-64 relative flex items-center justify-center ">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="absolute">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="absolute ">
               <defs>
                 <clipPath id="blobClip">
                   <path
