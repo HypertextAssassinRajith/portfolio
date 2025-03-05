@@ -38,7 +38,7 @@ export default function Qualification() {
     >
       <h1 className="text-4xl font-bold">Qualification</h1>
       <span className="text-xl font-semibold text-gray-700 dark:text-gray-500 mt-2">
-        My Life Work
+        My Life Journey
       </span>
       
       <div className="flex gap-4 mt-6">
