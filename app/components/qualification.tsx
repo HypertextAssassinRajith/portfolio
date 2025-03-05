@@ -65,9 +65,9 @@ export default function Qualification() {
               className={`relative mb-8 flex w-full ${idx % 2 === 0 ? "justify-start" : "justify-end"}`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: idx * 0.2 }}
+              transition={{ duration: 0.5, delay: idx * 1.5 }}
             >
-              <div className="relative w-1/2 p-4  rounded-lg shadow-md">
+              <div className="relative w-1/2 p-4 rounded-lg shadow-md">
                 <h3 className="text-lg font-bold">{item.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400">{item.place}</p>
                 <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mt-1">
