@@ -24,7 +24,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="relative flex flex-row w-full justify-between items-center px-6 md:px-10 py-4 shadow-sm">
+    <header className="fixed top-0 flex flex-row w-full justify-between items-center px-6 md:px-10 py-4 shadow-sm">
       <a href="#" className="text-lg font-semibold">
         Rajith Sanjaya
       </a>

@@ -53,7 +53,7 @@ export default function About (){
                     className="mt-4 px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 flex items-center space-x-2 transition-transform duration-300 group"
                     >
                     <span>Download CV</span>
-                    <Download  className="transform transition-transform duration-300 group-hover:translate-y-2" />
+                    <Download  className="transform transition-transform duration-300 group-hover:translate-y-1" />
                     </a>
                 </div>
              </div>
