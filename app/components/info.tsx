@@ -16,7 +16,7 @@ export default function Info() {
   if (!mounted) return null;
   return (
     <section
-      className={`flex flex-col-reverse lg:flex-row items-center justify-evenly min-h-screen px-6 md:px-10 transition-colors duration-300 ${
+      className={`flex flex-col-reverse pt-23  lg:flex-row items-center justify-evenly min-h-screen px-6 md:px-10 transition-colors duration-300 ${
         theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       }`}
     >
