@@ -3,7 +3,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { UilWindowGrid, UilServer, UilServerNetwork } from '@iconscout/react-unicons';
+import { UilWindowGrid, UilServer, UilServerNetwork , UilCloudDatabaseTree } from '@iconscout/react-unicons';
 import { ChevronDown } from "lucide-react";
 
 export default function Skill() {
@@ -28,7 +28,7 @@ export default function Skill() {
   const sections = [
     { title: "Frontend Developer", experience: "More than 2 Years" },
     { title: "Backend Developer", experience: "More than 3 Years" },
-    { title: "Full Stack Developer", experience: "More than 5 Years" }
+    { title: "DevOps Developer", experience: "More than 5 Years" }
   ];
 
   return (
@@ -47,7 +47,7 @@ export default function Skill() {
             <div className="flex justify-evenly items-center p-5 cursor-pointer" onClick={() => toggleExpand(index)}>
               {section.title === "Frontend Developer" && <UilWindowGrid size={50} color="#8200DB" />}
               {section.title === "Backend Developer" && <UilServer size={50} color="#8200DB" />}
-              {section.title === "Full Stack Developer" && <UilServerNetwork size={50} color="#8200DB" />}
+              {section.title === "DevOps Developer" && <UilCloudDatabaseTree size={50} color="#8200DB" />}
               <div>
                 <h1 className="text-lg">{section.title}</h1>
                 <span className="text-sm">{section.experience}</span>
@@ -61,13 +61,24 @@ export default function Skill() {
             {expandedSections[index] && (
               <div className="flex justify-center items-center p-5">
                 {section.title === "Frontend Developer" && (
-                  <img src="https://www.svgrepo.com/show/452092/react.svg" alt="React Icon" className="w-10 h-10" />
+                  <div className="flex justify-evenly w-full">
+                    <img src="https://www.svgrepo.com/show/452092/react.svg" alt="React Icon" className="w-10 h-10" />
+                    <img src="https://www.svgrepo.com/show/452156/angular.svg" alt="React Icon" className="w-10 h-10" />
+                    <img src="https://www.svgrepo.com/show/378440/nextjs-fill.svg" alt="React Icon" className="w-10 h-10" />
+                  </div>
                 )}
                 {section.title === "Backend Developer" && (
-                  <img src="https://www.svgrepo.com/show/373872/nestjs.svg" alt="NestJS Icon" className="w-10 h-10" />
+                  <div className="flex justify-evenly w-full">
+                    <img src="https://www.svgrepo.com/show/373872/nestjs.svg" alt="NestJS Icon" className="w-10 h-10" />
+                    <img src="https://www.svgrepo.com/show/330398/express.svg" alt="NestJS Icon" className="w-10 h-10" />
+                    <img src="https://www.svgrepo.com/show/354380/spring-icon.svg" alt="Spring Icon" className="w-10 h-10" />
+                  </div>
                 )}
-                {section.title === "Full Stack Developer" && (
-                  <img src="https://www.svgrepo.com/show/354380/spring-icon.svg" alt="Spring Icon" className="w-10 h-10" />
+                {section.title === "DevOps Developer" && (
+                  <div className="flex justify-evenly w-full">
+                  <img src="https://www.svgrepo.com/show/452192/docker.svg" alt="NestJS Icon" className="w-10 h-10" />
+                  <img src="https://www.svgrepo.com/show/452210/git.svg" alt="NestJS Icon" className="w-10 h-10" />
+                </div>
                 )}
               </div>
             )}
