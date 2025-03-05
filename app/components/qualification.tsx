@@ -12,7 +12,9 @@ const educationData = [
 ];
 
 const workData = [
-  { title: "Technology Section", place: "G.C.E A/L", date: "2019-2020" },
+  { title: "Samanala Publishers PVT (LTD)", place: "Associate Software Engineer", date: "Present" },
+  { title: "Epic Lanka Technology's", place: "Intern Fullstack Developer", date: "2022-2024" },
+  { title: "Software Engineer", place: "Freelancer", date: "2020-2021" },
 ];
 
 export default function Qualification() {
