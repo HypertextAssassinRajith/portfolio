@@ -2,7 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import Image from "next/image";
+// import Image from "next/image";
+import { Download } from "lucide-react";
 
 
 export default function About (){
@@ -21,17 +22,14 @@ export default function About (){
           }`}
         >
              <h1 className="text-4xl font-bold">About Me</h1>
-             <span className="text-xl font-semibold text-gray-700 dark:text-gray-300 mt-2">My Introduction</span>
+             <span className="text-xl font-semibold text-gray-700 dark:text-gray-500 mt-2">My Introduction</span>
              <div className="grid grid-cols-2 mt-5">
              {/* <Image src={Profile.src} alt="Profile Picture" width={200} height={200} className="absolute z-10 rounded-full" /> */}
-             <div className="bg-blue-500 size-50 p-6 text-white">
-                This is a box with a blue background.
-            </div>
-
+             <div className="bg-blue-500 size-50 p-6 text-white"></div>
                 <div className="flex flex-col items-center justify-evenly">
-                <p className="text-gray-600 dark:text-gray-400 mt-2">Software Engineering Web development  and design ,with Ui / Ux design of user
+                <p className="text-gray-600 dark:text-gray-400 mt-2 text-center">Software Engineering Web development  and design ,with Ui / Ux design of user
                 friendly modern style</p>
-                <div className="grid grid-cols-3  gap-4 justify-center w-fit">
+                <div className="grid grid-cols-3  gap-4 justify-center w-fit mt-3">
                     <div className="flex flex-col items-center justify-evenly">
                         <span className="font-semibold">02+</span>
                         <span className="text-xs">Years</span>
@@ -50,6 +48,13 @@ export default function About (){
                          <span className="text-xs">worked </span>
                     </div>
                 </div>
+                <a
+                    href="mailto:sanjayasenanayaka11@gmail.com"
+                    className="mt-4 px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 flex items-center space-x-2 transition-transform duration-300 group"
+                    >
+                    <span>Download CV</span>
+                    <Download  className="transform transition-transform duration-300 group-hover:translate-y-2" />
+                    </a>
                 </div>
              </div>
         </section>
