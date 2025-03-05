@@ -42,7 +42,7 @@ export default function Skill() {
       <span className="text-xl font-semibold text-gray-700 dark:text-gray-500 mt-2">
         My Skills
       </span>
-      <div className="flex flex-col m-5 w-2/3 lg:w-1/5">
+      <div className="flex flex-col m-5 w-4/4 lg:w-1/5">
         {sections.map((section, index) => (
           <div key={index}>
             <div className="flex justify-evenly items-center p-5 cursor-pointer" onClick={() => toggleExpand(index)}>
