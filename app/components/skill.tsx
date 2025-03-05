@@ -57,7 +57,15 @@ export default function Skill() {
             </div>
             {expandedSections[index] && (
               <div className="flex justify-center items-center p-5">
-                <img src="https://www.svgrepo.com/show/452092/react.svg" alt="React Icon" className="w-10 h-10" />
+                {section.title === "Frontend Developer" && (
+                  <img src="https://www.svgrepo.com/show/452092/react.svg" alt="React Icon" className="w-10 h-10" />
+                )}
+                {section.title === "Backend Developer" && (
+                  <img src="https://www.svgrepo.com/show/373872/nestjs.svg" alt="NestJS Icon" className="w-10 h-10" />
+                )}
+                {section.title === "Full Stack Developer" && (
+                  <img src="https://www.svgrepo.com/show/354380/spring-icon.svg" alt="Spring Icon" className="w-10 h-10" />
+                )}
               </div>
             )}
           </div>
