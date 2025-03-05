@@ -63,22 +63,22 @@ export default function Skill() {
               <div className="flex justify-center items-center p-5">
                 {section.title === "Frontend Developer" && (
                   <div className="flex justify-evenly w-full">
-                    <Image src="https://www.svgrepo.com/show/452092/react.svg" alt="React Icon" className="w-10 h-10" />
-                    <Image src="https://www.svgrepo.com/show/452156/angular.svg" alt="React Icon" className="w-10 h-10" />
-                    <Image src="https://www.svgrepo.com/show/378440/nextjs-fill.svg" alt="React Icon" className="w-10 h-10" />
+                    <Image src="https://www.svgrepo.com/show/452092/react.svg" alt="React Icon" width={50} height={50} className="w-10 h-10" />
+                    <Image src="https://www.svgrepo.com/show/452156/angular.svg" alt="React Icon" width={50} height={50} className="w-10 h-10" />
+                    <Image src="https://www.svgrepo.com/show/378440/nextjs-fill.svg" alt="React Icon" width={50} height={50} className="w-10 h-10" />
                   </div>
                 )}
                 {section.title === "Backend Developer" && (
                   <div className="flex justify-evenly w-full">
-                    <Image src="https://www.svgrepo.com/show/373872/nestjs.svg" alt="NestJS Icon" className="w-10 h-10" />
-                    <Image src="https://www.svgrepo.com/show/330398/express.svg" alt="NestJS Icon" className="w-10 h-10" />
-                    <Image src="https://www.svgrepo.com/show/354380/spring-icon.svg" alt="Spring Icon" className="w-10 h-10" />
+                    <Image src="https://www.svgrepo.com/show/373872/nestjs.svg" alt="NestJS Icon" width={50} height={50} className="w-10 h-10" />
+                    <Image src="https://www.svgrepo.com/show/330398/express.svg" alt="NestJS Icon" width={50} height={50} className="w-10 h-10" />
+                    <Image src="https://www.svgrepo.com/show/354380/spring-icon.svg" alt="Spring Icon" width={50} height={50} className="w-10 h-10" />
                   </div>
                 )}
                 {section.title === "DevOps Developer" && (
                   <div className="flex justify-evenly w-full">
-                  <Image src="https://www.svgrepo.com/show/452192/docker.svg" alt="NestJS Icon" className="w-10 h-10" />
-                  <Image src="https://www.svgrepo.com/show/452210/git.svg" alt="NestJS Icon" className="w-10 h-10" />
+                  <Image src="https://www.svgrepo.com/show/452192/docker.svg" alt="NestJS Icon" width={50} height={50} className="w-10 h-10" />
+                  <Image src="https://www.svgrepo.com/show/452210/git.svg" alt="NestJS Icon" width={50} height={50} className="w-10 h-10" />
                 </div>
                 )}
               </div>
