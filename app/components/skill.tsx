@@ -2,67 +2,67 @@
 
 import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { UilWindowGrid } from '@iconscout/react-unicons'
+import { UilWindowGrid } from '@iconscout/react-unicons';
 import { ChevronDown } from "lucide-react";
 
+export default function Skill() {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const [expandedSections, setExpandedSections] = useState<boolean[]>([false, false, false]);
 
-export default function Skill(){
-      const { theme } = useTheme();
-      const [mounted, setMounted] = useState(false);
-      const [isExpanded, setIsExpanded] = useState(false);
-    
-      useEffect(() => {
-        setMounted(true);
-      }, []);
-      if (!mounted) return null;
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-      const toggleExpand = () => {
-        setIsExpanded(!isExpanded);
-      };
+  if (!mounted) return null;
 
-    return(
-        <section className={`flex flex-col items-center justify-evenly  px-6 md:px-10 transition-colors duration-300 pt-20 ${
-            theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
-          }`}>
-            <h1 className="text-4xl font-bold">Skills</h1>
-            <span className="text-xl font-semibold text-gray-700 dark:text-gray-500 mt-2">My Skills</span>
-            <div className="flex flex-col m-5 w-2/3 lg:w-1/5">
-              <div className="flex justify-evenly items-center p-5" onClick={toggleExpand}>
-                <UilWindowGrid size = {50} color="#8200DB" />
-                <div>
-                  <h1 className="text-lg">Frontend Developer</h1>
-                  <span className="text-sm">More than 2 Years</span>
-                </div>
-                <ChevronDown
-                    className={`transform transition-transform duration-500 ${
-                      isExpanded ? "rotate-180" : ""
-                    }`}
-                  />
+  const toggleExpand = (index: number) => {
+    setExpandedSections(prevState => {
+      const newState = [...prevState];
+      newState[index] = !newState[index];
+      return newState;
+    });
+  };
+
+  const sections = [
+    { title: "Frontend Developer", experience: "More than 2 Years" },
+    { title: "Backend Developer", experience: "More than 3 Years" },
+    { title: "Full Stack Developer", experience: "More than 5 Years" }
+  ];
+
+  return (
+    <section
+      className={`flex flex-col items-center justify-evenly px-6 md:px-10 transition-colors duration-300 pt-20 ${
+        theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
+      }`}
+    >
+      <h1 className="text-4xl font-bold">Skills</h1>
+      <span className="text-xl font-semibold text-gray-700 dark:text-gray-500 mt-2">
+        My Skills
+      </span>
+      <div className="flex flex-col m-5 w-2/3 lg:w-1/5">
+        {sections.map((section, index) => (
+          <div key={index}>
+            <div className="flex justify-evenly items-center p-5 cursor-pointer" onClick={() => toggleExpand(index)}>
+              <UilWindowGrid size={50} color="#8200DB" />
+              <div>
+                <h1 className="text-lg">{section.title}</h1>
+                <span className="text-sm">{section.experience}</span>
               </div>
-              {isExpanded && (
-                    <div className="flex justify-center items-center p-5">
-                      <img src="https://www.svgrepo.com/show/452092/react.svg" alt="React Icon" className="w-10 h-10" />
-                    </div>
-              )}
-              <div className="flex justify-evenly items-center p-5">
-                <UilWindowGrid size = {50} color="#8200DB" />
-                <div>
-                  <h1 className="text-lg">Frontend Developer</h1>
-                  <span className="text-sm">More than 2 Years</span>
-                </div>
-                <ChevronDown />
-              </div>
-              <div className="flex justify-evenly items-center p-5">
-                <UilWindowGrid size = {50} color="#8200DB" />
-                <div>
-                  <h1 className="text-lg">Frontend Developer</h1>
-                  <span className="text-sm">More than 2 Years</span>
-                </div>
-                <ChevronDown />
-              </div>
-            
+              <ChevronDown
+                className={`transform transition-transform duration-500 ${
+                  expandedSections[index] ? "rotate-180" : ""
+                }`}
+              />
             </div>
-        </section>
-    );
-
+            {expandedSections[index] && (
+              <div className="flex justify-center items-center p-5">
+                <img src="https://www.svgrepo.com/show/452092/react.svg" alt="React Icon" className="w-10 h-10" />
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }
