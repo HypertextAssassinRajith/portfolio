@@ -1,6 +1,7 @@
 import About from "./components/about";
 import Header from "./components/header";
 import Info from "./components/info";
+import Qualification from "./components/qualification";
 import Skill from "./components/skill";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <Info />
       <About />
       <Skill />
+      <Qualification />
     </>
   );
 }
