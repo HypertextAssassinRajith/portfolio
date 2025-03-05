@@ -1,8 +1,9 @@
 "use client"
 
+
 import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { UilWindowGrid } from '@iconscout/react-unicons';
+import { UilWindowGrid, UilServer, UilServerNetwork } from '@iconscout/react-unicons';
 import { ChevronDown } from "lucide-react";
 
 export default function Skill() {
@@ -44,7 +45,9 @@ export default function Skill() {
         {sections.map((section, index) => (
           <div key={index}>
             <div className="flex justify-evenly items-center p-5 cursor-pointer" onClick={() => toggleExpand(index)}>
-              <UilWindowGrid size={50} color="#8200DB" />
+              {section.title === "Frontend Developer" && <UilWindowGrid size={50} color="#8200DB" />}
+              {section.title === "Backend Developer" && <UilServer size={50} color="#8200DB" />}
+              {section.title === "Full Stack Developer" && <UilServerNetwork size={50} color="#8200DB" />}
               <div>
                 <h1 className="text-lg">{section.title}</h1>
                 <span className="text-sm">{section.experience}</span>

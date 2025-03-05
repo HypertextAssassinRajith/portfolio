@@ -7,4 +7,6 @@ declare module '@iconscout/react-unicons' {
     }
   
     export const UilWindowGrid: FC<IconProps>;
+    export const UilServer: FC<IconProps>;
+    export const UilServerNetwork: FC<IconProps>;
   }
