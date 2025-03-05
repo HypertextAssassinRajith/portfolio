@@ -35,7 +35,7 @@ export default function Info() {
 
         <div className="flex flex-col items-start lg:items-start lg:w-1/2 text-start lg:text-left">
         <h1 className="text-4xl font-bold">{"Hi, I'm Rajith Sanjaya"}</h1>
-        <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-300 mt-2">
+        <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-500 mt-2">
           Full Stack Developer
         </h3>
         <p className="text-gray-600 dark:text-gray-400 mt-2">
@@ -63,10 +63,10 @@ export default function Info() {
           <Github />
           </a>
         </div>
-        <div className="flex flex-col lg:flex-row items-center justify-center w-full  lg:mt-0">
-        <div className="lg:w-1/2 flex justify-center relative">
+        <div className="flex flex-col lg:flex-row items-center justify-center w-full lg:mt-0">
+        <div className="lg:w-1/2 flex justify-center relative ">
           <div className="w-96 md:w-80  sm:w-64 relative flex items-center justify-center ">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="absolute">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="absolute ">
               <defs>
                 <clipPath id="blobClip">
                   <path
