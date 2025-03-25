@@ -16,7 +16,7 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center hover:shadow-lg transition"
+              className="bg-white shadow-md rounded-md p-6 flex flex-col items-center hover:shadow-lg transition"
             >
               <div className="text-purple-600 text-3xl">{service.icon}</div>
               <h3 className="text-lg font-semibold mt-4 text-black">{service.title}</h3>
