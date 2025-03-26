@@ -15,7 +15,7 @@ export default function Services() {
 
 
     const services = [
-      { title: "Ui/Ux Design", icon: <UilWindow size={50} color="#8200DB" />, link: "#" },
+      { title: "Frontend Developer", icon: <UilWindow size={50} color="#8200DB" />, link: "#" },
       { title: "Backend Developer", icon: <UilCloudDatabaseTree  size={50} color="#8200DB" />, link: "#" },
       { title: "Creative Designer", icon: <UilIllustration  size={50} color="#8200DB" />, link: "#" },
     ];
