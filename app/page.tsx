@@ -1,6 +1,7 @@
 import About from "./components/about";
 import Contact from "./components/contact";
 import RecentContributions from "./components/contribution";
+import ImageGallery from "./components/gallery";
 import Header from "./components/header";
 import Info from "./components/info";
 import Qualification from "./components/qualification";
@@ -18,6 +19,7 @@ export default function Home() {
       <Services />
       <RecentContributions />
       <Contact />
+      <ImageGallery />
     </>
   );
 }
