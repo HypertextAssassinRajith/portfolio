@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 const images = [
   { src: "/path-to-image1.jpg", category: "Events" },
@@ -52,7 +53,9 @@ export default function ImageGallery() {
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {filteredImages.map((image, index) => (
-          <img
+          <Image
+            width={500}
+            height={500}
             key={index}
             src={image.src}
             alt={`Gallery ${index}`}
