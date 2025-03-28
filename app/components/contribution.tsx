@@ -62,13 +62,13 @@ export default function RecentContributions() {
             <SwiperSlide key={index}>
               <div className="flex flex-col items-center justify-center w-2/3 gap-6 md:flex-row">
                 <div className="bg-gray-200 p-6 rounded-full shadow-md">
-                  <Image src={item.image} alt={item.title} className="w-24 h-24" />
+                  <Image src={item.image} alt={item.title} className="w-24 h-24" width={500} height={500} />
                 </div>
                 <div className="text-left">
                   <h3 className="text-lg font-semibold">{item.title}</h3>
                   <p className="text-gray-500">{item.description}</p>
                   <a href={item.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center md:w-3/4 mt-6 px-6 py-3 w-2/4  bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 space-x-2">
-                      Github <ChevronRight size={20} />  
+                      Github <ChevronRight size={25} />  
                   </a>
                 </div>
               </div>

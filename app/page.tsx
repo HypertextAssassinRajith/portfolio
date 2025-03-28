@@ -1,4 +1,5 @@
 import About from "./components/about";
+import Contact from "./components/contact";
 import RecentContributions from "./components/contribution";
 import Header from "./components/header";
 import Info from "./components/info";
@@ -16,6 +17,7 @@ export default function Home() {
       <Qualification />
       <Services />
       <RecentContributions />
+      <Contact />
     </>
   );
 }
