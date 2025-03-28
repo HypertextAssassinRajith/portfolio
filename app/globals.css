@@ -40,6 +40,10 @@ body {
   align-items: center;
 }
 
+.swiper-slide-active{
+  margin-right: 52px;
+}
+
 .swiper-slide img {
   display: block;
   width: 100%;
