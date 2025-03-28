@@ -4,13 +4,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Keyboard, Mousewheel, Navigation, Pagination } from 'swiper/modules';
-import { ChevronRight, ChevronLeft } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
 import MindfulReaderRound from '../assets/images/Mindful-Reader-Round.png';
+import Image from 'next/image';
 
 
 const contributions = [
@@ -61,7 +62,7 @@ export default function RecentContributions() {
             <SwiperSlide key={index}>
               <div className="flex flex-col items-center justify-center w-2/3 gap-6 md:flex-row">
                 <div className="bg-gray-200 p-6 rounded-full shadow-md">
-                  <img src={item.image} alt={item.title} className="w-24 h-24" />
+                  <Image src={item.image} alt={item.title} className="w-24 h-24" />
                 </div>
                 <div className="text-left">
                   <h3 className="text-lg font-semibold">{item.title}</h3>
