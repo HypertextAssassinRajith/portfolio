@@ -1,4 +1,5 @@
 import About from "./components/about";
+import RecentContributions from "./components/contribution";
 import Header from "./components/header";
 import Info from "./components/info";
 import Qualification from "./components/qualification";
@@ -14,6 +15,7 @@ export default function Home() {
       <Skill />
       <Qualification />
       <Services />
+      <RecentContributions />
     </>
   );
 }
