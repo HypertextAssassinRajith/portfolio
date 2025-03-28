@@ -74,12 +74,8 @@ export default function RecentContributions() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <button className="swiper-button-prev absolute top-1/2 -left-10 transform -translate-y-1/2">
-          <ChevronLeft className="text-purple-500" size={24} />
-        </button>
-        <button className="swiper-button-next absolute top-1/2 -right-10 transform -translate-y-1/2">
-          <ChevronRight className="text-purple-500" size={24} />
-        </button>
+        <button className="swiper-button-prev absolute top-1/2 -left-10 transform -translate-y-1/2" />
+        <button className="swiper-button-next absolute top-1/2 -right-10 transform -translate-y-1/2" />
       </div>
     </div>
   );
