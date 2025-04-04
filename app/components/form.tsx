@@ -18,7 +18,7 @@ const ContactForm = () => {
 
 
   return (
-    <div className={`flex flex-col pt-23  lg:flex-row items-center justify-evenly  px-6 md:px-10 transition-colors duration-300  ${
+    <div className={`flex flex-col pt-23   items-center justify-evenly  px-6 md:px-10 transition-colors duration-300  ${
         theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       }`}>
         <h2 className="text-4xl font-bold pt-10">Contact Me</h2>
