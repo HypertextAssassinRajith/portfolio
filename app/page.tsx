@@ -1,4 +1,9 @@
 import About from "./components/about";
+import Contact from "./components/contact";
+import RecentContributions from "./components/contribution";
+import Footer from "./components/footer";
+import ContactForm from "./components/form";
+import ImageGallery from "./components/gallery";
 import Header from "./components/header";
 import Info from "./components/info";
 import Qualification from "./components/qualification";
@@ -14,6 +19,11 @@ export default function Home() {
       <Skill />
       <Qualification />
       <Services />
+      <RecentContributions />
+      <Contact />
+      <ImageGallery />
+      <ContactForm />
+      <Footer />
     </>
   );
 }

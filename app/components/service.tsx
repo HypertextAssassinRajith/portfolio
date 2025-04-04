@@ -1,16 +1,31 @@
+"use client"
+
+import React, { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 import { UilCloudDatabaseTree, UilIllustration, UilWindow } from '@iconscout/react-unicons'
 
 export default function Services() {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+      setMounted(true);
+    }, []);
+    if (!mounted) return null;
+
+
     const services = [
-      { title: "Ui/Ux Design", icon: <UilWindow size={50} color="#8200DB" />, link: "#" },
+      { title: "Frontend Developer", icon: <UilWindow size={50} color="#8200DB" />, link: "#" },
       { title: "Backend Developer", icon: <UilCloudDatabaseTree  size={50} color="#8200DB" />, link: "#" },
       { title: "Creative Designer", icon: <UilIllustration  size={50} color="#8200DB" />, link: "#" },
     ];
   
     return (
-      <div className="flex flex-col items-center p-10 bg-white min-h-screen">
-        <h2 className="text-4xl font-bold text-black">Services</h2>
-        <p className="text-xl font-semibold text-gray-700 dark:text-gray-500 mt-2">You can hire me</p>
+      <div className={`flex flex-col items-center justify-evenly px-6 md:px-10 transition-colors duration-300 ${
+        theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
+      }`}>
+        <h2 className="text-4xl font-bold pt-20">Services</h2>
+        <p className="text-lg font-semibold text-gray-700 dark:text-gray-500 mt-2">You can hire me</p>
   
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3  gap-6">
           {services.map((service, index) => (

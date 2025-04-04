@@ -39,7 +39,7 @@ export default function Skill() {
       }`}
     >
       <h1 className="text-4xl font-bold">Skills</h1>
-      <span className="text-xl font-semibold text-gray-700 dark:text-gray-500 mt-2">
+      <span className="text-lg font-semibold text-gray-700 dark:text-gray-500 mt-2">
         My Skills
       </span>
       <div className="flex flex-col m-5 w-4/4 lg:w-1/5">

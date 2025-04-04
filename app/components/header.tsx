@@ -24,7 +24,7 @@ export default function Header() {
   ];
 
   return (
-    <header className={`fixed top-0 flex flex-row w-full z-1 justify-between items-center px-6 md:px-10 py-4 shadow-sm
+    <header className={`fixed top-0 flex flex-row w-full z-100 justify-between items-center px-6 md:px-10 py-4 shadow-sm
     ${theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"}
     `}>
       <a href="#" className="text-lg font-semibold">

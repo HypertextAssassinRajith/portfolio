@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-// import Image from "next/image";
 import { Download } from "lucide-react";
 
 
@@ -21,7 +20,7 @@ export default function About (){
             theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
           }`}>
              <h1 className="text-4xl font-bold">About Me</h1>
-             <span className="text-xl font-semibold text-gray-700 dark:text-gray-500 mt-2">My Introduction</span>
+             <span className="text-lg font-semibold text-gray-700 dark:text-gray-500 mt-2">My Introduction</span>
              <div className="lg:grid lg:grid-cols-2 mt-5 items-center justify-evenly flex flex-col">
              {/* <Image src={Profile.src} alt="Profile Picture" width={200} height={200} className="absolute z-10 rounded-full" /> */}
              <div className="bg-blue-500 size-50 p-6 text-white"></div>
