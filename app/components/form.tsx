@@ -22,22 +22,22 @@ const ContactForm = () => {
         theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       }`}>
         <h2 className="text-4xl font-bold pt-10">Contact Me</h2>
-        <p className="text-xl font-semibold text-gray-700 dark:text-gray-500 mt-2 mb-15">Get connect with me</p>
-        <div className="max-w-xl mx-auto p-8 bg-white rounded-xl  space-y-6">
+        <p className="text-xl font-semibold text-gray-700 dark:text-gray-500 mt-2 mb-10">Get connect with me</p>
+        <div className="max-w-xl mx-auto p-8  rounded-xl  space-y-6">
         <div className="space-y-2">
-                <h2 className="text-lg font-medium text-gray-700 flex items-center gap-2">
+                <h2 className="text-lg font-medium  flex items-center gap-2">
                     <UilPhoneVolume   size={30} color="#8200DB" /> Call Me
                 </h2>
                 <p className="text-gray-500">+94-765901293</p>
             </div>
             <div className="space-y-2">
-                <h2 className="text-lg font-medium text-gray-700 flex items-center gap-2">
+                <h2 className="text-lg font-medium  flex items-center gap-2">
                     <UilEnvelopeAlt  size={30} color="#8200DB" /> Email Me
                 </h2>
                 <p className="text-gray-500">sanjayasenanayaka11@gmail.com</p>
             </div>
       <div className="space-y-2">
-        <h2 className="text-lg font-medium text-gray-700 flex items-center gap-2">
+        <h2 className="text-lg font-medium  flex items-center gap-2">
         <UilMapMarker  size={30} color="#8200DB" />  Address
         </h2>
         <p className="text-gray-500">No 69 Sahanagama, Wikkal</p>
