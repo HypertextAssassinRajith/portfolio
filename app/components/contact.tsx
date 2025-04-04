@@ -23,7 +23,7 @@ export default function DeveloperCard() {
                 <p className="text-sm mt-2">
                     Quickly contact me from here and get start your project right away
                 </p>
-                <button className="mt-4 px-4 py-2 bg-white text-purple-600 rounded-lg border border-purple-600 flex items-center gap-2 hover:bg-purple-100">
+                <button className="cursor-pointer mt-4 px-4 py-2 bg-white text-purple-600 rounded-lg border border-purple-600 flex items-center gap-2 hover:bg-purple-100">
                     Contact Me <SendHorizontal size={20} />
                 </button>
             </div>
