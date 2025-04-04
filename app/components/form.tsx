@@ -74,7 +74,7 @@ const ContactForm = () => {
           placeholder="Message"
           className="w-full p-3 border border-gray-300 rounded-lg h-28 focus:outline-none focus:ring-2 focus:ring-purple-500"
         ></textarea>
-        <a className="w-1/2 cursor-pointer  px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 flex items-center space-x-2 transition-transform duration-300 group">
+        <a className="w-4/6 md:w-1/2 cursor-pointer px-6 py-5 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 flex items-center space-x-2 transition-transform duration-300 group">
             <span>Send Message</span>
             <SendHorizontal  className="transform transition-transform duration-300 group-hover:translate-x-1" />
         </a>

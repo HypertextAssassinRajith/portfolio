@@ -35,13 +35,13 @@ export default function ImageGallery() {
             theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
           }`}>
       <h2 className="text-4xl font-bold">Photo Gallery</h2>
-      <p className="text-lg font-semibold text-gray-700 dark:text-gray-500 mt-2 ">Memories of my journey</p>
-      <div className="flex justify-center gap-3 mb-6">
+      <p className="text-lg font-semibold text-gray-700 dark:text-gray-500 mt-2 mb-5 ">Memories of my journey</p>
+      <div className="justify-center gap-3 mb-6 ">
         {categories.map((category) => (
           <button
             key={category}
             onClick={() => setSelectedCategory(category)}
-            className={`px-4 py-2 rounded-md mt-5 ${
+            className={`px-4 py-2 rounded-md m-1 ${
               selectedCategory === category
                 ? "bg-blue-600 text-white"
                 : "bg-gray-200 text-gray-800"
