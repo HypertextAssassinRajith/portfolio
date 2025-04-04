@@ -13,5 +13,8 @@ declare module '@iconscout/react-unicons' {
     export const UilWindow: FC<IconProps>;
     export const UilCloudDatabaseTree: FC<IconProps>;
     export const UilIllustration : FC<IconProps>;
+    export const UilEnvelopeAlt : FC<IconProps>;
+    export const UilMapMarker : FC<IconProps>;
+    export const UilPhoneVolume : FC<IconProps>;
 
   }
