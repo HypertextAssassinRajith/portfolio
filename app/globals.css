@@ -55,3 +55,7 @@ body {
   position: relative;
   margin-top: 20px !important;
 }
+
+.swiper-button-prev,.swiper-button-next{
+  z-index: 1 !important;
+}
