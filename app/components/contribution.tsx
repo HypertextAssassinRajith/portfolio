@@ -43,7 +43,7 @@ export default function RecentContributions() {
       theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
     }`}>
       <h2 className="text-4xl font-bold pt-10">Contributions</h2>
-      <p className="text-xl font-semibold text-gray-700 dark:text-gray-500 mt-2 mb-15">Recent jobs</p>
+      <p className="text-lg font-semibold text-gray-700 dark:text-gray-500 mt-2 mb-15">Recent jobs</p>
       <div className="relative w-full md:w-2/3 mx-auto ">
         <Swiper
           cssMode={true}

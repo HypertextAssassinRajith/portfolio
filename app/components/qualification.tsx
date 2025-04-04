@@ -37,7 +37,7 @@ export default function Qualification() {
       }`}
     >
       <h1 className="text-4xl font-bold">Qualification</h1>
-      <span className="text-xl font-semibold text-gray-700 dark:text-gray-500 mt-2">
+      <span className="text-lg font-semibold text-gray-700 dark:text-gray-500 mt-2">
         My Life Journey
       </span>
       

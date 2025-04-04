@@ -35,7 +35,7 @@ export default function Info() {
 
         <div className="flex flex-col items-start lg:items-start lg:w-1/2 text-start lg:text-left">
         <h1 className="text-4xl font-bold">{"Hi, I'm Rajith Sanjaya"}</h1>
-        <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-500 mt-2">
+        <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-500 mt-2">
           Full Stack Developer
         </h3>
         <p className="text-gray-600 dark:text-gray-400 mt-2">

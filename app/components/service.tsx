@@ -25,7 +25,7 @@ export default function Services() {
         theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       }`}>
         <h2 className="text-4xl font-bold pt-20">Services</h2>
-        <p className="text-xl font-semibold text-gray-700 dark:text-gray-500 mt-2">You can hire me</p>
+        <p className="text-lg font-semibold text-gray-700 dark:text-gray-500 mt-2">You can hire me</p>
   
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3  gap-6">
           {services.map((service, index) => (
