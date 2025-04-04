@@ -1,6 +1,7 @@
 import About from "./components/about";
 import Contact from "./components/contact";
 import RecentContributions from "./components/contribution";
+import Footer from "./components/footer";
 import ContactForm from "./components/form";
 import ImageGallery from "./components/gallery";
 import Header from "./components/header";
@@ -22,6 +23,7 @@ export default function Home() {
       <Contact />
       <ImageGallery />
       <ContactForm />
+      <Footer />
     </>
   );
 }
