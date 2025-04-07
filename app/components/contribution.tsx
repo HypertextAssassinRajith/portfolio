@@ -10,33 +10,40 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
-import MindfulReaderRound from '../assets/images/Mindful-Reader-Round.png';
 import Image from 'next/image';
+import PocketBase, { RecordModel } from 'pocketbase';
 
+const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETBASE_API_URL);
 
-const contributions = [
-  {
-    title: 'Mindfull Reader',
-    description: 'A Online eBook Reader Mobile application',
-    image: MindfulReaderRound.src,
-    link: 'https://github.com/your-repo',
-  },
-  {
-    title: 'Mindfull Reader',
-    description: 'A Online eBook Reader Mobile application',
-    image: MindfulReaderRound.src,
-    link: 'https://github.com/your-repo',
-  },
-];
 
 export default function RecentContributions() {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [contributions, setContributions] = useState<RecordModel[]>([]);
+
+
+
+  useEffect (() => {
+    const fetchData = async () => {
+      try {
+        const records = await pb.collection('Contributions').getFullList();
+        setContributions(records)
+        console.log(records);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+  
+    fetchData();
+  }, [])
 
   useEffect(() => {
     setMounted(true);
   }, []);
   if (!mounted) return null;
+
+  console.log(contributions);
+  
 
   return (
     <div className={`z-10 flex flex-col pt-23  items-center justify-evenly  px-6 md:px-10 transition-colors duration-300  ${
@@ -58,11 +65,11 @@ export default function RecentContributions() {
           spaceBetween={50}
           slidesPerView={1}
         >
-          {contributions.map((item, index) => (
+          {contributions?.map((item, index) => (
             <SwiperSlide key={index}>
               <div className="flex flex-col items-center justify-center w-2/3 gap-6 md:flex-row">
                 <div className="bg-gray-200 p-6 rounded-full shadow-md">
-                  <Image src={item.image} alt={item.title} className="w-24 h-24" width={300} height={300} />
+                  <Image src={`${process.env.NEXT_PUBLIC_POCKETBASE_API_URL}/api/files/${item.collectionId}/${item.id}/${item.image}`} alt={item.title} className="w-24 h-24" width={300} height={300} />
                 </div>
                 <div className="text-left">
                   <h3 className="text-lg font-semibold">{item.title}</h3>
