@@ -78,7 +78,7 @@ export default function ImageGallery() {
             width={200}
             height={200}
             key={index}
-            src={`${process.env.NEXT_PUBLIC_POCKETBASE_API_URL}/api/files/${image.collectionId}/${image.id}/${image.image}`} alt={image.id}
+            src={`${process.env.NEXT_PUBLIC_POCKETBASE_API_URL}/api/files/${image.collectionId}/${image.id}/${image.image}`}
             alt={`Gallery ${index}`}
             className="w-full rounded-md shadow-lg"
           />
