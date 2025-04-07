@@ -28,13 +28,13 @@ const ContactForm = () => {
                 <h2 className="text-lg font-medium  flex items-center gap-2">
                     <UilPhoneVolume   size={30} color="#8200DB" /> Call Me
                 </h2>
-                <p className="text-gray-500">+94-765901293</p>
+                <p className="text-gray-500">+94-756901293</p>
             </div>
             <div className="space-y-2">
                 <h2 className="text-lg font-medium  flex items-center gap-2">
                     <UilEnvelopeAlt  size={30} color="#8200DB" /> Email Me
                 </h2>
-                <p className="text-gray-500">sanjayasenanayaka11@gmail.com</p>
+                <p className="text-gray-500">contact@rajithsanjaya.site</p>
             </div>
       <div className="space-y-2">
         <h2 className="text-lg font-medium  flex items-center gap-2">

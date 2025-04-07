@@ -42,7 +42,7 @@ export default function Info() {
           Experience in web design and producing quality works
         </p>
         <a
-          href="mailto:sanjayasenanayaka11@gmail.com"
+          href="mailto:contact@rajithsanjaya.site"
           className="mt-4 px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 flex items-center space-x-2 transition-transform duration-300 group"
         >
           <span>Contact Me</span>
