@@ -3,25 +3,17 @@
 import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import PocketBase from 'pocketbase';
+import PocketBase, { RecordModel } from 'pocketbase';
 
-const images = [
-  { src: "/path-to-image1.jpg", category: "Events" },
-  { src: "/path-to-image2.jpg", category: "Captures" },
-  { src: "/path-to-image3.jpg", category: "Travels" },
-  { src: "/path-to-image4.jpg", category: "Designs" },
-  { src: "/path-to-image5.jpg", category: "Works" },
-];
+const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETBASE_API_URL);
 
 const categories = ["All", "Events", "Captures", "Travels", "Designs", "Works"];
 
 export default function ImageGallery() {
-  const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETBASE_API_URL);
-
   const [selectedCategory, setSelectedCategory] = useState("All");
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const [images, setImages] = useState<any[]>([]);
+  const [images, setImages] = useState<RecordModel[]>([]);
 
 
   useEffect (() => {

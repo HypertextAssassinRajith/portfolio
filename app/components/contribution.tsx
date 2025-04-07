@@ -10,20 +10,17 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
-import MindfulReaderRound from '../assets/images/Mindful-Reader-Round.png';
 import Image from 'next/image';
-import PocketBase from 'pocketbase';
+import PocketBase, { RecordModel } from 'pocketbase';
 
+const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETBASE_API_URL);
 
 
 export default function RecentContributions() {
-
-  const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETBASE_API_URL);
-
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const [contributions, setContributions] = useState<any[]>([]);
-  const [error, setError] = useState(null);
+  const [contributions, setContributions] = useState<RecordModel[]>([]);
+
 
 
   useEffect (() => {

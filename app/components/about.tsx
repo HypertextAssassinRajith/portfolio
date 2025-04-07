@@ -5,11 +5,12 @@ import { useTheme } from "next-themes";
 import { Download } from "lucide-react";
 import Image from "next/image";
 import Profile from "../../app/assets/images/about.jpg";
-import PocketBase from "pocketbase";
+import PocketBase, { RecordModel } from "pocketbase";
+
+const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETBASE_API_URL);
 
 export default function About () {
-  const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETBASE_API_URL);
-  const [item, setItem] = useState<any>(null);
+  const [item, setItem] = useState<RecordModel>();
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
