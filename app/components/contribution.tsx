@@ -38,7 +38,7 @@ export default function RecentContributions() {
     };
   
     fetchData();
-  })
+  }, [])
 
   useEffect(() => {
     setMounted(true);

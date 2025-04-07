@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import PocketBase from 'pocketbase';
 
 const images = [
   { src: "/path-to-image1.jpg", category: "Events" },
@@ -15,14 +16,34 @@ const images = [
 const categories = ["All", "Events", "Captures", "Travels", "Designs", "Works"];
 
 export default function ImageGallery() {
+  const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETBASE_API_URL);
+
   const [selectedCategory, setSelectedCategory] = useState("All");
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [images, setImages] = useState<any[]>([]);
+
+
+  useEffect (() => {
+    const fetchData = async () => {
+      try {
+        const records = await pb.collection('Galary').getFullList();
+        setImages(records)
+        console.log(records);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+    fetchData();
+  }, [])
+
 
     useEffect(() => {
       setMounted(true);
     }, []);
     if (!mounted) return null;
+
+  console.log(images);
 
   const filteredImages =
     selectedCategory === "All"
@@ -54,10 +75,10 @@ export default function ImageGallery() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {filteredImages.map((image, index) => (
           <Image
-            width={500}
-            height={500}
+            width={200}
+            height={200}
             key={index}
-            src={image.src}
+            src={`${process.env.NEXT_PUBLIC_POCKETBASE_API_URL}/api/files/${image.collectionId}/${image.id}/${image.image}`} alt={image.id}
             alt={`Gallery ${index}`}
             className="w-full rounded-md shadow-lg"
           />
