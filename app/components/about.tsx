@@ -33,6 +33,7 @@ export default function About () {
     setMounted(true);
   }, []);
 
+  
 
   if (!mounted || !item) return null;
 
