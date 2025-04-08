@@ -65,7 +65,7 @@ export default function Info() {
         </div>
         <div className="flex flex-col lg:flex-row items-center justify-center w-full lg:mt-0">
         <div className="lg:w-1/2 flex justify-center relative ">
-          <div className="w-96 md:w-80  sm:w-64 relative flex items-center justify-center ">
+          <div className="w-64 lg:w-96 md:w-80  sm:w-64 relative flex items-center justify-center ">
             <Image
               src={Profile.src}
               alt="Profile Picture"
