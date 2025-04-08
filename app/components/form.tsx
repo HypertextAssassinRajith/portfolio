@@ -36,18 +36,18 @@ const ContactForm = () => {
             <h2 className="text-4xl font-bold pt-10">Contact Me</h2>
             <p className="text-lg font-semibold text-gray-700 dark:text-gray-500 mt-2 mb-10">Get connect with me</p>
             <div className="pb-8 rounded-xl space-y-6">
-                <div className="space-y-2">
+                <a className="space-y-2" href="tel:+94756901293">
                     <h2 className="text-lg font-medium flex items-center gap-2">
                         <UilPhoneVolume size={30} color="#8200DB" /> Call Me
                     </h2>
-                    <p className="text-gray-500">+94-756901293</p>
-                </div>
-                <div className="space-y-2">
+                    <p className="text-gray-500">+94756901293</p>
+                </a>
+                <a className="space-y-2" href="mailto:contact@rajithsanjaya.site">
                     <h2 className="text-lg font-medium flex items-center gap-2">
                         <UilEnvelopeAlt size={30} color="#8200DB" /> Email Me
                     </h2>
                     <p className="text-gray-500">contact@rajithsanjaya.site</p>
-                </div>
+                </a>
                 <div className="space-y-2">
                     <h2 className="text-lg font-medium flex items-center gap-2">
                         <UilMapMarker size={30} color="#8200DB" /> Address
