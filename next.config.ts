@@ -2,8 +2,15 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ['pocketbase.rajithsanjaya.site'],
-  }
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "pocketbase.rajithsanjaya.site",
+        port: "",
+        pathname: "/api/files/**",
+      }
+    ],
+  },
 };
 
 export default nextConfig;

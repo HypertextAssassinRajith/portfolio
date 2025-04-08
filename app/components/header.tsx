@@ -42,27 +42,37 @@ export default function Header() {
         </ul>
       </nav>
       <div className="flex items-center">
-        <button
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 mr-2"
+      <div
+        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        className={`w-13 h-8 flex items-center rounded-full p-1 cursor-pointer transition-colors duration-300 ease-in-out ${
+          theme === "dark" ? "bg-gray-700" : "bg-gray-300"
+        } mr-2`}
+      >
+        <div
+          className={`w-6 h-6 rounded-full shadow-md transform transition-transform duration-300 ease-in-out bg-white flex items-center justify-center ${
+            theme === "dark" ? "translate-x-5" : ""
+          }`}
         >
           {theme === "dark" ? (
-            <Sun size={20} className="text-gray-900 lg:text-gray-100" />
+            <Moon size={15} className="text-black" />
           ) : (
-            <Moon size={20} className="text-gray-800 lg:text-gray-100" />
+            <Sun size={15} className="text-black" />
           )}
-        </button>
-        <button
-          onClick={() => setIsMenuOpen((prev) => !prev)}
-          className="md:hidden p-2 rounded-full bg-gray-200 dark:bg-gray-800"
-        >
-          {isMenuOpen ? (
-            <X size={20} className={theme === "light" ? "text-gray-800" : "text-white"} />
-          ) : (
-            <Menu size={20} className={theme === "light" ? "text-gray-800" : "text-gray-900"} />
-          )}
-        </button>
+        </div>
       </div>
+
+      <button
+        onClick={() => setIsMenuOpen((prev) => !prev)}
+        className="md:hidden p-2 rounded-full bg-gray-200 dark:bg-gray-800"
+      >
+        {isMenuOpen ? (
+          <X size={20} className={theme === "light" ? "text-white" : "text-white"} />
+        ) : (
+          <Menu size={20} className={theme === "light" ? "text-white" : "text-white"} />
+        )}
+      </button>
+    </div>
+
       {isMenuOpen && (
         <nav className="absolute top-full left-0 w-full bg-white dark:bg-gray-900 border-t border-gray-300 dark:border-gray-700 md:hidden">
           <ul className="flex flex-col space-y-4 p-4 text-base font-medium text-gray-800 dark:text-gray-100">
