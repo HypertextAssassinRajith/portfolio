@@ -10,7 +10,6 @@ const ContactForm = () => {
     const { theme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
-    // State for form inputs
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [project, setProject] = useState("");
@@ -28,6 +27,9 @@ const ContactForm = () => {
         const mailtoLink = `mailto:contact@rajithsanjaya.site?subject=${encodeURIComponent(subject)}&body=${body}`;
         window.location.href = mailtoLink;
     };
+
+    
+    const googleMapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("No 69 Sahanagama, Wikkal")}`;
 
     return (
         <div className={`flex flex-col pt-23 w-full items-center justify-evenly px-6 md:px-10 transition-colors duration-300 ${
@@ -48,12 +50,12 @@ const ContactForm = () => {
                     </h2>
                     <p className="text-gray-500">contact@rajithsanjaya.site</p>
                 </a>
-                <div className="space-y-2">
+                <a className="space-y-2" href={googleMapsLink} target="_blank" rel="noopener noreferrer">
                     <h2 className="text-lg font-medium flex items-center gap-2">
                         <UilMapMarker size={30} color="#8200DB" /> Address
                     </h2>
                     <p className="text-gray-500">No 69 Sahanagama, Wikkal</p>
-                </div>
+                </a>
                 <div className="overflow-hidden rounded-xl shadow-md">
                     <iframe
                         className="w-full h-56"
