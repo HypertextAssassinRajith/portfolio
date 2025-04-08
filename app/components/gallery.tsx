@@ -58,7 +58,7 @@ export default function ImageGallery() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className={`relative px-4 py-2 rounded-md m-1 focus:outline-none ${
-                  isSelected ? "text-white" : "bg-gray-200 text-gray-800"
+                  isSelected ? "" : "bg-gray-200 text-gray-800"
                 }`}
               >
                 {category}
