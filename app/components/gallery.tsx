@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import PocketBase, { RecordModel } from 'pocketbase';
+import { motion, LayoutGroup } from "framer-motion";
 
 const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETBASE_API_URL);
 
@@ -15,25 +16,23 @@ export default function ImageGallery() {
   const [mounted, setMounted] = useState(false);
   const [images, setImages] = useState<RecordModel[]>([]);
 
-
-  useEffect (() => {
+  useEffect(() => {
     const fetchData = async () => {
       try {
         const records = await pb.collection('Galary').getFullList();
-        setImages(records)
+        setImages(records);
         console.log(records);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
     };
     fetchData();
-  }, [])
+  }, []);
 
-
-    useEffect(() => {
-      setMounted(true);
-    }, []);
-    if (!mounted) return null;
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  if (!mounted) return null;
 
   console.log(images);
 
@@ -43,27 +42,37 @@ export default function ImageGallery() {
       : images.filter((img) => img.category === selectedCategory);
 
   return (
-
     <div className={`flex flex-col items-center text-center justify-evenly pt-20 px-6 md:px-10 transition-colors duration-300 ${
             theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
           }`}>
       <h2 className="text-4xl font-bold">Photo Gallery</h2>
-      <p className="text-lg font-semibold text-gray-700 dark:text-gray-500 mt-2 mb-5 ">Memories of my journey</p>
-      <div className="justify-center gap-3 mb-6 ">
-        {categories.map((category) => (
-          <button
-            key={category}
-            onClick={() => setSelectedCategory(category)}
-            className={`px-4 py-2 rounded-md m-1 ${
-              selectedCategory === category
-                ? "bg-blue-600 text-white"
-                : "bg-gray-200 text-gray-800"
-            }`}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+      <p className="text-lg font-semibold text-gray-700 dark:text-gray-500 mt-2 mb-5">Memories of my journey</p>
+      <LayoutGroup>
+        <div className="gap-3 mb-6 relative">
+          {categories.map((category) => {
+            const isSelected = selectedCategory === category;
+            return (
+              <motion.button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`relative px-4 py-2 rounded-md m-1 focus:outline-none ${
+                  isSelected ? "text-white" : "bg-gray-200 text-gray-800"
+                }`}
+              >
+                {category}
+                {isSelected && (
+                  <motion.div
+                    layoutId="underline"
+                    className="absolute left-0 right-0 -bottom-1 h-1 rounded bg-blue-600"
+                  />
+                )}
+              </motion.button>
+            );
+          })}
+        </div>
+      </LayoutGroup>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {filteredImages.map((image, index) => (
           <Image
