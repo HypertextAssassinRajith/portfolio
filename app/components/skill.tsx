@@ -36,8 +36,7 @@ export default function Skill() {
     <section
       className={`flex flex-col items-center justify-evenly px-6 md:px-10 transition-colors duration-300 pt-20 ${
         theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
-      }`}
-    >
+      }`} id="skills">
       <h1 className="text-4xl font-bold">Skills</h1>
       <span className="text-lg font-semibold text-gray-700 dark:text-gray-500 mt-2">
         My Skills

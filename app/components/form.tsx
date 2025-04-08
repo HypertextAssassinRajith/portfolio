@@ -20,7 +20,7 @@ const ContactForm = () => {
   return (
     <div className={`flex flex-col pt-23   items-center justify-evenly  px-6 md:px-10 transition-colors duration-300  ${
         theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
-      }`}>
+      }`} id="form">
         <h2 className="text-4xl font-bold pt-10">Contact Me</h2>
         <p className="text-lg font-semibold text-gray-700 dark:text-gray-500 mt-2 mb-10">Get connect with me</p>
         <div className="max-w-xl mx-auto p-8  rounded-xl  space-y-6">

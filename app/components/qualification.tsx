@@ -34,8 +34,7 @@ export default function Qualification() {
     <section
       className={`flex flex-col items-center px-6 md:px-10 transition-colors duration-300 pt-20 ${
         theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
-      }`}
-    >
+      }`}  id="qualifications">
       <h1 className="text-4xl font-bold">Qualification</h1>
       <span className="text-lg font-semibold text-gray-700 dark:text-gray-500 mt-2">
         My Life Journey

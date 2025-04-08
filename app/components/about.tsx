@@ -42,7 +42,7 @@ export default function About () {
   return (
     <section className={`flex flex-col items-center justify-evenly px-6 md:px-10 transition-colors duration-300 ${
       theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
-    }`}>
+    }`} id="about">
       <h1 className="text-4xl font-bold">About Me</h1>
       <span className="text-lg font-semibold text-gray-700 dark:text-gray-500 mt-2">My Introduction</span>
       <div className="mt-5 items-center justify-evenly flex flex-col">
