@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useEffect, useState } from "react";
@@ -33,6 +34,15 @@ const iconVariants = {
   }
 };
 
+const profilePicVariants = {
+  hidden: { opacity: 0, x: 100 },
+  visible: { 
+    opacity: 1, 
+    x: 0, 
+    transition: { duration: 1.2, ease: "easeOut" }
+  }
+};
+
 export default function Info() {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -58,7 +68,7 @@ export default function Info() {
         >
           <motion.a 
             href="https://linkedin.com/in/sanjaya-senanayaka-976a32193" 
-            target="_blank" 
+            target="_blank"
             className=""
             variants={iconVariants}
           >
@@ -66,7 +76,7 @@ export default function Info() {
           </motion.a>
           <motion.a 
             href="https://www.reddit.com/user/Rajith11" 
-            target="_blank" 
+            target="_blank"
             className=""
             variants={iconVariants}
           >
@@ -74,7 +84,7 @@ export default function Info() {
           </motion.a>
           <motion.a 
             href="https://github.com/Hypertext-Assassin-RSS" 
-            target="_blank" 
+            target="_blank"
             className=""
             variants={iconVariants}
           >
@@ -115,7 +125,7 @@ export default function Info() {
         >
           <motion.a 
             href="https://linkedin.com/in/sanjaya-senanayaka-976a32193" 
-            target="_blank" 
+            target="_blank"
             className=""
             variants={iconVariants}
           >
@@ -123,7 +133,7 @@ export default function Info() {
           </motion.a>
           <motion.a 
             href="https://www.reddit.com/user/Rajith11" 
-            target="_blank" 
+            target="_blank"
             className=""
             variants={iconVariants}
           >
@@ -131,7 +141,7 @@ export default function Info() {
           </motion.a>
           <motion.a 
             href="https://github.com/Hypertext-Assassin-RSS" 
-            target="_blank" 
+            target="_blank"
             className=""
             variants={iconVariants}
           >
@@ -140,7 +150,12 @@ export default function Info() {
         </motion.div>
         <div className="flex flex-col lg:flex-row items-center justify-center w-full lg:mt-0">
           <div className="lg:w-1/2 flex justify-center relative">
-            <div className="w-64 lg:w-96 md:w-80 sm:w-64 relative flex items-center justify-center">
+            <motion.div
+              className="w-64 lg:w-96 md:w-80 sm:w-64 relative flex items-center justify-center"
+              variants={profilePicVariants}
+              initial="hidden"
+              animate="visible"
+            >
               <Image
                 src={Profile.src}
                 alt="Profile Picture"
@@ -148,7 +163,7 @@ export default function Info() {
                 height={500}
                 className="absolute z-10 rounded-full"
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
