@@ -18,12 +18,12 @@ const ContactForm = () => {
 
 
   return (
-    <div className={`flex flex-col pt-23   items-center justify-evenly  px-6 md:px-10 transition-colors duration-300  ${
+    <div className={`flex flex-col pt-23  w-full items-center justify-evenly  px-6 md:px-10 transition-colors duration-300  ${
         theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       }`} id="form">
         <h2 className="text-4xl font-bold pt-10">Contact Me</h2>
         <p className="text-lg font-semibold text-gray-700 dark:text-gray-500 mt-2 mb-10">Get connect with me</p>
-        <div className="max-w-xl mx-auto p-8  rounded-xl  space-y-6">
+        <div className="pb-8 rounded-xl  space-y-6">
         <div className="space-y-2">
                 <h2 className="text-lg font-medium  flex items-center gap-2">
                     <UilPhoneVolume   size={30} color="#8200DB" /> Call Me
@@ -74,7 +74,7 @@ const ContactForm = () => {
           placeholder="Message"
           className="w-full p-3 border border-gray-300 rounded-lg h-28 focus:outline-none focus:ring-2 focus:ring-purple-500"
         ></textarea>
-        <a className="w-4/6 md:w-1/2 cursor-pointer px-6 py-5 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 flex items-center space-x-2 transition-transform duration-300 group">
+        <a className="w-48  cursor-pointer px-6 py-5 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 flex items-center space-x-2 transition-transform duration-300 group">
             <span>Send Message</span>
             <SendHorizontal  className="transform transition-transform duration-300 group-hover:translate-x-1" />
         </a>
