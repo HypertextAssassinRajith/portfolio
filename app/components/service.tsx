@@ -23,7 +23,7 @@ export default function Services() {
     return (
       <div className={`flex flex-col items-center justify-evenly px-6 md:px-10 transition-colors duration-300 ${
         theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
-      }`}>
+      }`} id="services">
         <h2 className="text-4xl font-bold pt-20">Services</h2>
         <p className="text-lg font-semibold text-gray-700 dark:text-gray-500 mt-2">You can hire me</p>
   

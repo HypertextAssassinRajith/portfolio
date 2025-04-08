@@ -17,7 +17,7 @@ export default function DeveloperCard() {
     return (
         <div className={`flex flex-col pt-23  lg:flex-row items-center justify-evenly  px-6 md:px-10 transition-colors duration-300  ${
             theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
-          }`}>
+          }`} id='contactme'>
             <div className="bg-purple-600 text-white p-6 rounded-2xl max-w-md mb-3">
                 <h2 className="text-2xl font-bold">Do you looking for developer</h2>
                 <p className="text-sm mt-2">

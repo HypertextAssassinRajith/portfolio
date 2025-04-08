@@ -44,7 +44,7 @@ export default function ImageGallery() {
   return (
     <div className={`flex flex-col items-center text-center justify-evenly pt-20 px-6 md:px-10 transition-colors duration-300 ${
             theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
-          }`}>
+          }`} id="gallery">
       <h2 className="text-4xl font-bold">Photo Gallery</h2>
       <p className="text-lg font-semibold text-gray-700 dark:text-gray-500 mt-2 mb-5">Memories of my journey</p>
       <LayoutGroup>

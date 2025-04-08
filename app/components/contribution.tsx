@@ -48,7 +48,7 @@ export default function RecentContributions() {
   return (
     <div className={`z-10 flex flex-col pt-23  items-center justify-evenly  px-6 md:px-10 transition-colors duration-300  ${
       theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
-    }`}>
+    }`} id='contribution'>
       <h2 className="text-4xl font-bold pt-10">Contributions</h2>
       <p className="text-lg font-semibold text-gray-700 dark:text-gray-500 mt-2 mb-15">Recent jobs</p>
       <div className="relative w-full md:w-2/3 mx-auto ">
