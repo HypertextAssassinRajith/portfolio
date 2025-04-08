@@ -37,9 +37,18 @@ const iconVariants = {
 const profilePicVariants = {
   hidden: { opacity: 0, x: 100 },
   visible: { 
-    opacity: 1, 
-    x: 0, 
+    opacity: 1,
+    x: 0,
     transition: { duration: 1.2, ease: "easeOut" }
+  }
+};
+
+const slideUpVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 1.5, ease: "easeOut" }
   }
 };
 
@@ -101,19 +110,32 @@ export default function Info() {
           >
             {"Hi, I'm Rajith Sanjaya"}
           </motion.h1>
-          <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-500 mt-2">
+          <motion.h3 
+            className="text-lg font-semibold text-gray-700 dark:text-gray-500 mt-2"
+            variants={slideUpVariants}
+            initial="hidden"
+            animate="visible"
+          >
             Full Stack Developer
-          </h3>
-          <p className="text-gray-600 dark:text-gray-400 mt-2">
+          </motion.h3>
+          <motion.p 
+            className="text-gray-600 dark:text-gray-400 mt-2"
+            variants={slideUpVariants}
+            initial="hidden"
+            animate="visible"
+          >
             Experience in web design and producing quality works
-          </p>
-          <a
+          </motion.p>
+          <motion.a
             href="mailto:contact@rajithsanjaya.site"
             className="mt-4 px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 flex items-center space-x-2 transition-transform duration-300 group"
+            variants={slideUpVariants}
+            initial="hidden"
+            animate="visible"
           >
             <span>Contact Me</span>
             <SendHorizontal className="transform transition-transform duration-300 group-hover:translate-x-2" />
-          </a>
+          </motion.a>
         </div>
       </div>
       <div className="flex content-center w-full">
