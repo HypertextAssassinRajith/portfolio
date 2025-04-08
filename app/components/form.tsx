@@ -38,23 +38,23 @@ const ContactForm = () => {
             <h2 className="text-4xl font-bold pt-10">Contact Me</h2>
             <p className="text-lg font-semibold text-gray-700 dark:text-gray-500 mt-2 mb-10">Get connect with me</p>
             <div className="pb-8 rounded-xl space-y-6">
-                <a className="space-y-2" href="tel:+94756901293">
+                <a className="space-y-1" href="tel:+94756901293">
                     <h2 className="text-lg font-medium flex items-center gap-2">
                         <UilPhoneVolume size={30} color="#8200DB" /> Call Me
                     </h2>
-                    <p className="text-gray-500">+94756901293</p>
+                    <p className="text-gray-500 mb-2">+94756901293</p>
                 </a>
-                <a className="space-y-2" href="mailto:contact@rajithsanjaya.site">
+                <a className="space-y-1" href="mailto:contact@rajithsanjaya.site">
                     <h2 className="text-lg font-medium flex items-center gap-2">
                         <UilEnvelopeAlt size={30} color="#8200DB" /> Email Me
                     </h2>
-                    <p className="text-gray-500">contact@rajithsanjaya.site</p>
+                    <p className="text-gray-500 mb-2">contact@rajithsanjaya.site</p>
                 </a>
-                <a className="space-y-2" href={googleMapsLink} target="_blank" rel="noopener noreferrer">
+                <a className="space-y-1" href={googleMapsLink} target="_blank" rel="noopener noreferrer">
                     <h2 className="text-lg font-medium flex items-center gap-2">
                         <UilMapMarker size={30} color="#8200DB" /> Address
                     </h2>
-                    <p className="text-gray-500">No 69 Sahanagama, Wikkal</p>
+                    <p className="text-gray-500 mb-2">No 69 Sahanagama, Wikkal</p>
                 </a>
                 <div className="overflow-hidden rounded-xl shadow-md">
                     <iframe
