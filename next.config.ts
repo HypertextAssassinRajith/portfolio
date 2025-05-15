@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "pocketbase.rajithsanjaya.site",
+        hostname: "fly-pocketbase-dawn.fly.dev",
         port: "",
         pathname: "/api/files/**",
       }
