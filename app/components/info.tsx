@@ -67,9 +67,9 @@ export default function Info() {
       className={`flex flex-col-reverse pt-23 lg:flex-row items-center justify-evenly min-h-screen px-6 md:px-10 transition-colors duration-300 ${
         theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       }`} id="home">
-      <div className="flex justify-evenly w-full">
+      <div className="flex justify-evenly w-full ">
         <motion.div 
-          className="h-56 grid-cols-1 content-evenly hidden lg:grid"
+          className="h-56 grid-cols-1 content-evenly hidden lg:grid lg:ml-50"
           variants={iconContainerVariants}
           initial="hidden"
           animate="visible"
@@ -100,7 +100,7 @@ export default function Info() {
           </motion.a>
         </motion.div>
 
-        <div className="flex flex-col items-start lg:items-start lg:w-1/2 text-start lg:text-left">
+        <div className="flex flex-col items-start lg:items-start lg:w-1/2 text-start lg:text-left lg:ml-20">
           <motion.h1 
             className="text-4xl font-bold pb-2"
             variants={fillTextVariants}
