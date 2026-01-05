@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useEffect, useState } from "react";
@@ -100,9 +99,9 @@ export default function Info() {
           </motion.a>
         </motion.div>
 
-        <div className="flex flex-col items-start lg:items-start lg:w-1/2 text-start lg:text-left lg:ml-20">
+        <div className="flex flex-col items-start lg:items-start lg:w-1/2 text-start lg:text-left lg:ml-25">
           <motion.h1 
-            className="text-4xl font-bold pb-2"
+            className="text-4xl font-bold pb-2 lg:text-6xl"
             variants={fillTextVariants}
             initial="hidden"
             animate="visible"
@@ -172,7 +171,7 @@ export default function Info() {
         <div className="flex flex-col lg:flex-row items-center justify-center w-full lg:mt-0">
           <div className="lg:w-1/2 flex justify-center relative">
             <motion.div
-              className="w-64 lg:w-96 md:w-80 sm:w-64 relative flex items-center justify-center"
+              className="relative flex items-center justify-center w-64 h-64 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem] 2xl:w-[32rem] 2xl:h-[32rem]"
               variants={profilePicVariants}
               initial="hidden"
               animate="visible"
@@ -180,9 +179,10 @@ export default function Info() {
               <Image
                 src={Profile.src}
                 alt="Profile Picture"
-                width={500}
-                height={500}
-                className="absolute z-10 rounded-full"
+                fill
+                sizes="(min-width: 1536px) 32rem, (min-width: 1280px) 28rem, (min-width: 1024px) 24rem, (min-width: 768px) 20rem, 16rem"
+                className="absolute inset-0 z-10 rounded-full object-cover"
+                priority
               />
             </motion.div>
           </div>
